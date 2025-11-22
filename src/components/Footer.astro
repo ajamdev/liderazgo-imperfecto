@@ -1,14 +1,66 @@
 ---
 import Liderazgo from '@/assets/liderazgo-imperfecto.svg'
+import YouTube from '@/assets/social/youtube.svg'
+import Instagram from '@/assets/social/instagram.svg'
+import LinkedIn from '@/assets/social/linkedin.svg'
+import FooterContactForm from './FooterContactForm.astro'
+
+const QueOfrecemos = [
+  { title: 'Liderazgo Imperfecto', link: '#'},
+  {title: 'Se parte de nuestra comunidad', link: '#'},
+  {title:'Tu compañero de crecimiento', link: '#'},
+  {title:'La biblioteca del líder', link: '#'},
+  {title:'Descubre tu próximo aprendizaje', link: '#'},
+  {title:'Jose en acción', link: '#'},
+]
+
+const NOSOTROS_LINKS = [
+  {title:'Jose Echeverri', link:'#'},
+  {title:'Jimena Farai', link:'#'},
+  {title:'Natalia Palacios', link:'#'},
+]
 ---
-<footer class="container mx-auto p-4 xl:px-40 xl:py-8 bg-text text-white">
+<footer class="container mx-auto p-4 md:px-20 md:py-8 xl:px-40 xl:py-8 bg-text text-white">
   <div class="grid grid-cols-1 md:grid-cols-4">
     <div class="space-y-6">
       <Liderazgo class="w-auto h-16"/>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero fugiat nihil rem. Optio eos, dolore ipsa nihil architecto atque vitae!</p>
+      <p class="text-sm">Liderazgo Imperfecto es una plataforma dedicada a compartir conocimientos y experiencias sobre liderazgo y desarrollo personal.</p>
+      <nav class="flex space-x-5 items-center">
+      <a href="https://www.youtube.com/@JoseMEcheverri"><YouTube/></a>
+      <a href="https://www.instagram.com/joseecheverri/"><Instagram/></a>
+      <a href="https://www.linkedin.com/in/jose-echeverri/"><LinkedIn/></a>
+    </nav>
     </div>
+
+    <div class="space-y-6">
+      <h2 class="text-xl font-bold">Que ofrecemos...</h2>
+      <ul class="space-y-4">
+        {
+          QueOfrecemos.map(({title, link})=>(
+            <li>
+              <a href={link}>{title}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+
+    <div class="space-y-6">
+      <h2 class="text-xl font-bold">Nosotros</h2>
+      <ul class="space-y-4">
+        {
+          NOSOTROS_LINKS.map(({title, link})=>(
+            <li>
+              <a href={link}>{title}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+
     <div>
-      <!-- todo: social links -->
+      <h2 class="text-xl font-bold mb-6">Contacto</h2>
+      <FooterContactForm />
     </div>
   </div>
   <hr class="border-white/30 my-8" />
