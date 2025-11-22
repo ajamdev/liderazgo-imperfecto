@@ -1,0 +1,33 @@
+---
+import Liderazgo from '@/assets/liderazgo-imperfecto.svg'
+import HeaderLink from "./HeaderLink.astro";
+---
+
+<header class="fixed container top-0 left-0 w-full z-50 transition-all duration-300 bg-transparent animate p-4 xl:px-40 flex justify-between items-center" id="menu">
+  <a href="/"> <Liderazgo class="w-auto h-10"/> </a>
+  <nav>
+    <ul class="flex space-x-5">
+      <li><HeaderLink href="/">Inicio</HeaderLink></li>
+      <li><HeaderLink href="/about">Sobre mí</HeaderLink></li>
+    </ul>
+  </nav>
+</header>
+
+<script type="module">
+  let lastScroll = 0;
+  const menu = document.getElementById("menu");
+  
+  window.addEventListener("scroll", () => {
+    const currentScroll = window.scrollY;
+    
+    if (currentScroll > 50) {
+      menu.classList.remove("bg-transparent");
+      menu.classList.add("bg-black/30", "backdrop-blur-md", "text-white");
+    } else {
+      menu.classList.remove("bg-black/30", "backdrop-blur-md", "text-white");
+      menu.classList.add("bg-transparent");
+    }
+    
+    lastScroll = currentScroll;
+  });
+</script>
