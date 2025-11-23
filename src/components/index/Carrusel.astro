@@ -1,0 +1,48 @@
+---
+import Section from "@/components/ui/Section.astro"
+import { CLIENT } from "@/lib/const/client"
+---
+
+<Section>
+  <div class="overflow-hidden w-full relative" id="carousel">
+    <div class="flex items-center gap-5 animate-scroll" >
+      {
+        CLIENT.map(({id, name, icon})=>(
+          <div class="flex items-center shrink-0">
+            <span class="sr-only">{name}</span>
+            <icon.name id={id} class="w-auto h-8 text-dark-green"/>
+          </div>
+        ))
+      }          
+      {
+        CLIENT.map(({id, name, icon})=>(
+          <div class="flex items-center shrink-0">
+            <span class="sr-only">{name}</span>
+            <icon.name id={id} class="w-auto h-8 text-dark-green"/>
+          </div>
+        ))
+      }          
+    </div>
+  </div>
+</Section>
+
+<style>
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-scroll {
+    animation: scroll 30s linear infinite;
+    width: max-content;
+  }
+
+  /* Pausa la animación al hacer hover */
+  #carousel:hover .animate-scroll {
+    animation-play-state: paused;
+  }
+</style>
