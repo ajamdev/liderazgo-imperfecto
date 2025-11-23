@@ -3,14 +3,16 @@ import Liderazgo from '@/assets/liderazgo-imperfecto.svg'
 import HeaderLink from "./HeaderLink.astro";
 ---
 
-<header class="fixed container top-0 left-0 w-full z-50 transition-all duration-300 bg-transparent animate p-4 md:px-20 xl:px-40  flex justify-between items-center" id="menu">
-  <a href="/"> <Liderazgo class="w-auto h-10"/> </a>
-  <nav>
-    <ul class="flex space-x-5">
-      <li><HeaderLink href="/">Inicio</HeaderLink></li>
-      <li><HeaderLink href="/about">Sobre mí</HeaderLink></li>
-    </ul>
-  </nav>
+<header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-transparent" id="menu">
+  <div class="container mx-auto p-4 md:px-20 xl:px-40 flex justify-between items-center">
+    <a href="/"> <Liderazgo class="w-auto h-10"/> </a>
+    <nav>
+      <ul class="flex space-x-5">
+        <li><HeaderLink href="/">Inicio</HeaderLink></li>
+        <li><HeaderLink href="/about">Sobre mí</HeaderLink></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
 <script type="module">
