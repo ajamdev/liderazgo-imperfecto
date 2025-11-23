@@ -1,0 +1,26 @@
+---
+import Section from "@/components/ui/Section.astro";
+import {SERVICES} from '@/lib/const/services'
+---
+  <Section>
+  <header class="mb-6">
+    <h2 class="font-bold text-[clamp(var(--text-2xl),5vw,var(--text-3xl))] text-balance">Nuestros Servicios</h2>
+  </header>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+    {
+      SERVICES.map(({id, name, description, link, active})=>(
+        <a href={active ? undefined : link} aria-disabled={active}>
+          <article id={id} class="p-6 bg-dark-green  h-80 w-full rounded-xl flex flex-col justify-end">
+            {active && ( <span class="inline-flex items-center px-2 py-1 text-xs font-medium bg-orange-100 text-orange-800 rounded-full max-w-max">Próximamente</span>)}
+            <div class="space-y-6">
+              <header>
+                <h3 class="text-[clamp(var(--text-xl),5vw,var(--text-2xl))] font-bold text-balance text-lightgreen">{name}</h3>
+              </header>
+              <p class="text-lightgreen">{description}</p>
+            </div>
+          </article>
+        </a>
+      ))
+    }
+  </div>
+</Section>
