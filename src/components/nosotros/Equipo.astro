@@ -1,0 +1,30 @@
+---
+import Section from "../ui/Section.astro";
+import { getCollection } from "astro:content";
+const profile = await getCollection('profile');
+import { Image } from "astro:assets";
+---
+
+<Section>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+    {
+      profile.map((profile: any)=>{
+        const {slug, data} = profile
+        const {image, title, description} = data
+        return (
+          <a href={`/perfil/${slug}`} class="block border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
+            <article>
+              <figure>
+                <Image src={image} alt={`foto de ${title}`} width={650} height={180} transition:name={`img-${slug}`}/>
+              </figure>
+              <div>
+                <h2>{title}</h2>
+                <p>{description}</p>
+              </div>
+            </article>
+          </a>
+        )
+      })
+    }
+  </div>
+</Section>
