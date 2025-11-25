@@ -1,11 +1,11 @@
 ---
 title: Jose Echeverri
-job: [Speaker, Mentor]
+job: ["Speaker Internacional", "Mentor en Liderazgo", 'Autor de "Liderazgo Imperfecto"']
 link: 
   linkedin: https://www.linkedin.com/in/jose-echeverri/
   youtube: https://www.youtube.com/@JoseMEcheverri
-description: Soy Jose, visionario, potenciador de lideres, mentor y conferencista.
-image: https://joseecheverri.com/wp-content/uploads/2025/05/jose-echeverri-2.webp
+description: Autor de "Liderazgo Imperfecto". Mentor y speaker que potencia líderes auténticos en +10 países. Experto en talento humano.
+image: https://joseecheverri.com/wp-content/uploads/2025/11/jose_echeverri_perfil.webp
 ---
 
 Soy Jose, visionario, potenciador de lideres, mentor y conferencista.
