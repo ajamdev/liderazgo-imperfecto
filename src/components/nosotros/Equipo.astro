@@ -12,17 +12,20 @@ import { Image } from "astro:assets";
         const {slug, data} = profile
         const {image, title, description} = data
         return (
-          <a href={`/perfil/${slug}`} class="block border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <article>
-              <figure>
-                <Image src={image} alt={`foto de ${title}`} width={650} height={180} transition:name={`img-${slug}`}/>
-              </figure>
-              <div>
-                <h2>{title}</h2>
-                <p>{description}</p>
+          <a href={`/perfil/${slug}`} class="group">
+            <article class="overflow-hidden rounded-xl block shadow-lg">
+              <div class="overflow-hidden">
+                <Image src={image} alt={`foto de ${title}`} width={650} height={180} transition:name={`img-${slug}`} class="aspect-video object-top object-cover transition-all transform group-hover:scale-110 duration-300"/>
+              </div>
+              <div class="space-y-5 p-5">
+                <div class="prose">
+                  <h2 class="text-[clamp(var(--text-lg),5vw,var(--text-xl))]">{title}</h2>
+                  <p class="text-sm text-muted-foreground">{description}</p>
+                </div>
+                <span class="px-4 py-2 bg-amarillo-mostaza font-bold text-white rounded-lg">Leer más</span>
               </div>
             </article>
-          </a>
+          </a> 
         )
       })
     }
