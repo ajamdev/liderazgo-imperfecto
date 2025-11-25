@@ -2,6 +2,20 @@
 import Section from "../ui/Section.astro";
 ---
 
-<Section class="h-dvh">
-  <h1>Nosotros</h1>
+<Section class="h-dvh mt-12">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-5 w-full h-full">
+    <div class="w-full h-full flex flex-col justify-center prose">
+      <header>
+        <h1 class="text-[clamp(var(--text-4xl),5vw,var(--text-5xl))] font-bold max-w-full">
+          Sobre Nosotros
+        </h1>
+      </header>
+      <p class="text-lg md:text-xl">
+        Conoce al equipo detrás de Liderazgo Imperfecto y descubre nuestra misión de inspirar y empoderar a líderes en todo el mundo.
+      </p>
+    </div>
+    <div>
+      <!-- todo:contenido pendiente -->
+    </div>
+  </div>
 </Section>
