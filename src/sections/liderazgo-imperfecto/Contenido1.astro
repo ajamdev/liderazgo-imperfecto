@@ -1,0 +1,18 @@
+---
+import Section from "@/components/ui/Section.astro";
+import { Image } from "astro:assets";
+---
+
+<Section>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-5 w-full h-full">
+    <div class="overflow-hidden w-full h-full rounded-xl">
+      <Image src="https://joseecheverri.com/wp-content/uploads/2025/11/ukuxlzcgs5dzendr3yjk.webp" alt="Descripción de la imagen" height={320} width={480} class="w-full h-full object-cover"/>
+    </div>
+    <div class="flex flex-col justify-center">
+      <p class="my-[1em]">No podemos ser auténticos y liderar a los demás sin conectarnos profundamente con nosotros mismos</p>
+      <p class="my-[1em]">Para ayudar a las personas que nos rodean a tener éxito y convertirse en la mejor versión de si mismos, tenemos que esforzarnos por ser la versión de nosotros mismos.</p>
+      <p class="my-[1em]">¡Conviértete en tu mejor versión, para hacer crecer tu negocio!</p>
+      <a href="#" class="bg-amarillo-mostaza px-16 py-2 rounded-xl mt-6 inline-block max-w-max font-semibold">Hablemos</a>
+    </div>
+  </div>
+</Section>
