@@ -7,6 +7,11 @@
   --color-dark-green: #194138;
   --color-lightgreen: #63B983;
   --color-amarillo-mostaza: #E0A857;
+
+  /* font size */
+  --text-hero: clamp(var(--text-5xl), 5vw, var(--text-6xl));
+  --text-heading2: clamp(var(--text-2xl), 5vw, var(--text-3xl));
+  --text-headding3: clamp(var(--text-xl), 5vw, var(--text-2xl));
 }
 
 
