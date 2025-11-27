@@ -8,7 +8,7 @@ export const getLastPosts = async ({perPage=10}:{perPage?:number}={})=>{
   const results = await response.json()
   if (!results.length) throw new Error("No posts found")
   
-  console.log(results)
+  // console.log(results)
 
   const posts = results.map((post:any)=>{
     // const {
