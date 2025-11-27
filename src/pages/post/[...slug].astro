@@ -6,12 +6,12 @@ const slug = Astro.params.slug
 if(!slug) return Astro.redirect('/404')
 
 const { title, content, seo } = await getPostInfo(slug)
-// export const prerender = false
+export const prerender = false
 
-export async function getStaticPaths(){
-  const slugs = await getAllPostSlugs
-  return slugs.map((slug)=>({params: {slug}}))
-}
+// export async function getStaticPaths(){
+//   const slugs = await getAllPostSlugs
+//   return slugs.map((slug: any) => ({params: {slug}}))
+// }
 ---
 
 <Layout title={title} description={seo.description}>
