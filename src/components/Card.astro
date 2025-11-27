@@ -1,0 +1,32 @@
+---
+interface Posts {
+  title: string
+  excerpt: string
+  image: string
+  slug: string
+  date: string
+  author?: string
+}
+
+const { title, excerpt, image, slug, date, author } = Astro.props as Posts
+---
+
+<a href={`/post/${slug}`}>
+  <article class="rounded-xl overflow-hidden space-y-5">
+    <div class="overflow-hidden aspect-video">
+      <img 
+        src={image} 
+        alt={title} 
+        loading="lazy" 
+        decoding="async"
+        class="w-full h-full object-cover"
+      />
+    </div>
+    <small>{new Date(date).toLocaleDateString('es-ES', { day: 'numeric', month: 'short', year: 'numeric' }).replace(/\b\w/g, l => l.toUpperCase())}</small>
+    <small>{author}</small>
+    <hr />
+    <header>
+      <h2 class="font-bold my-[0.83em]">{title}</h2>
+    </header>
+  </article>
+</a>
