@@ -1,11 +1,23 @@
 ---
 import Section from "@/components/ui/Section.astro";
 import Ebook from '@/assets/e-book.svg'
+import { COMUNIDAD } from "@/lib/const/comunidad";
 ---
 
 <Section>
   <h2 class="text-heading2 font-bold my-[0.83em]">Recursos para la comunidad</h2>
-  <div>
-   
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+   {
+    COMUNIDAD.map(({title, description, link})=>(
+      <a href={link}>
+        <article class="bg-amarillo-mostaza p-6 rounded-xl w-full h-full">
+          <header>
+            <h3 class="text-headding3 my-[1em] font-bold text-balance">{title}</h3>
+          </header>
+          <p class="text-pretty my-[1em]">{description}</p>
+        </article>
+      </a>
+    ))
+   }
   </div>
 </Section>

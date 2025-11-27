@@ -1,0 +1,14 @@
+---
+import Card from '@/components/Card.astro'
+import Section from '@/components/ui/Section.astro'
+import { getLastPosts } from "@/lib/wp"
+
+
+const posts = await getLastPosts({perPage: 3})
+---
+
+<Section>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+    {posts.map((post: any) => <Card {...post} />)}
+  </div>
+</Section>
