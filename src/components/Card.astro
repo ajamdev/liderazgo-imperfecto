@@ -8,7 +8,7 @@ interface Posts {
   author?: string
 }
 
-const { title, excerpt, image, slug, date, author } = Astro.props as Posts
+const { title, image, slug, date, author } = Astro.props as Posts
 ---
 
 <a href={`/post/${slug}`}>
