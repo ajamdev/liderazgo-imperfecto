@@ -10,17 +10,20 @@ import ChevronDown from '@/assets/icons/chevron-down.svg'
     <a href="/"> <Liderazgo class="w-auto h-10"/> </a>
     <nav class="flex space-x-5 items-center">
       <ul class="flex space-x-5">
-        <li><HeaderLink href="/nosotros">Nosotros</HeaderLink></li>
+        <li><HeaderLink class="hover:border-b-2 transition-all duration-100" href="/nosotros">Nosotros</HeaderLink></li>
         <li class="relative group">
-          <div class="cursor-pointer flex items-center space-x-4"><span>Que ofrecemos</span> <ChevronDown class="size-4 group-hover:rotate-180 transform transition-all duration-300" /></div>
+          <div class="cursor-pointer flex group-hover:delay-700 items-center space-x-4"><span>Que ofrecemos</span> <ChevronDown class="size-4 group-hover:rotate-180 transform transition-all duration-300" /></div>
           <ul class="absolute bg-text text-gray-50 w-96 translate-x-1/2 top-11 right-0 p-4 space-y-5 rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
             {
-              LINK.map(({link, title, active})=>(
+              LINK.map(({link, title, active, icon})=>(
           <li>
             {active ? (
-            <HeaderLink class="inline-block w-full h-full p-2" href={link}>{title}</HeaderLink>
+            <HeaderLink class="inline-flex items-center space-x-4 w-full h-full p-2 hover:border-b-2 hover:border-b-amarillo-mostaza transition-all duration-300" href={link}><span><icon.name /></span><span>{title}</span></HeaderLink>
             ) : (
-            <span class="inline-block w-full h-full p-2 opacity-50 cursor-not-allowed">{title}</span>
+            <div class="flex space-x-4 items-center">
+              <span><icon.name /></span>
+              <span class="inline-block w-full h-full p-2 opacity-50 cursor-not-allowed">{title}</span>
+            </div>
             )}
           </li>
               ))
