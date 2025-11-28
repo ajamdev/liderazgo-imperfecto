@@ -1,0 +1,59 @@
+<form >
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+    <div class="space-y-2 col-span-2 md:col-span-1">
+      <label class="block" for="nombre">Nombre</label>
+      <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre" class="border w-full px-4 py-2 rounded-lg">
+    </div>
+    <div class="space-y-2 col-span-2 md:col-span-1">
+      <label class="block" for="apellido">Apellido</label>
+      <input type="text" name="apellido" id="apellido" placeholder="Escribe tu apellido" class="border w-full px-4 py-2 rounded-lg">
+    </div>
+    <div class="space-y-2 col-span-2 md:col-span-1 ">
+      <label class="block" for="email">Correo Electrónico</label>
+      <input type="email" name="email" id="email" placeholder="Escribe tu correo electrónico" class="border w-full px-4 py-2 rounded-lg">
+    </div>
+    <div class="space-y-2 col-span-2 md:col-span-1">
+      <label class="block" for="telefono">Teléfono</label>
+      <input type="tel" name="telefono"  id="telefono" placeholder="Escribe tu número de teléfono" class="border w-full px-4 py-2 rounded-lg">
+    </div>
+    <div class="space-y-2 col-span-2 md:col-span-1">
+      <label class="block" for="rol">Cargo o Rol</label>
+      <select name="rol" id="rol">
+        <option value="">Seleccione su rol</option>
+        <option value="ceo">CEO/founder</option>
+        <option value="presidente">Presidente/VP</option>
+        <option value="gerente general">Gerente General</option>
+        <option value="director de recursos humanos">Director de Recursos Humanos</option>
+        <option value="lider - director de area">Líder / Director de Área</option>
+        <option value="otro">Otro</option>
+      </select>
+    </div>
+    <div class="space-y-2 col-span-2 md:col-span-1">
+      <label class="block" for="empleados">¿Cuántos empleados tiene tu empresa?</label>
+      <select name="empleados" id="empleados">
+        <option value="">Seleccione una opción</option>
+        <option value="somos una startup">Somos una startup</option>
+        <option value="50 - 200">Entre 50 y 200 empleados</option>
+        <option value="200 - 500">Entre 200 y 500 empleados</option>
+        <option value="1000-5000">Entre 1.000 y 5.000 empleados</option>
+        <option value="500+">Más de 5.000 empleados</option>
+      </select>
+    </div>
+    <div class="space-y-2 col-span-2 md:col-span-1">
+      <label class="block" for="desafio">¿Cuál es el mayor desafío que actualmente presenta en su empresa?</label>
+      <select name="desafio" id="desafio">
+        <option value="">Seleccione una opción</option>
+        <option value="liderazgo">Liderazgo</option>
+        <option value="resistencia al cambio">Resistencia al cambio</option>
+        <option value="cultura de innovación">Cultura de innovación</option>
+        <option value="gestion del talento">Gestión del talento</option>
+        <option value="comunicacion asertiva">Comunicación asertiva</option>
+        <option value="diversidad, equidad e inclusion">Diversidad, equidad e inclusión</option>
+        <option value="seguridad psicologica">Seguridad psicológica</option>
+      </select>
+    </div>
+    <div class="col-span-2 flex justify-center mt-4">
+      <button class="bg-amarillo-mostaza px-4 py-2 rounded-lg font-semibold w-full max-w-44" type="submit">Enviar</button>
+    </div>
+  </div>
+</form>
