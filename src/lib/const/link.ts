@@ -17,7 +17,7 @@ export const LINK: Link[] = [
   {
     link: "/consultorias",
     title: "Consultorías",
-    active: false,
+    active: true,
     icon: {
       name: Consultorias  
     }
