@@ -13,7 +13,7 @@ export const SERVICES: Service[] = [
     name: 'Sé parte de nuestra comunidad',
     description: 'Encuentra mi Blog, E-Books y herramientas gratuitas que te ayudaran a transformar tu futuro hoy.',
     link: '/comunidad',
-    active: false,
+    active: true,
   },
   {
     id: 'tu_companero_de_crecimiento',
@@ -27,7 +27,7 @@ export const SERVICES: Service[] = [
     name: 'La biblioteca del líder',
     description: 'Una  selección curada para el crecimiento personal',
     link: '/biblioteca-del-lider',
-    active: false,
+    active: true,
   },
   {
     id: 'descubre_tu_proximo_aprendizaje',
@@ -41,6 +41,6 @@ export const SERVICES: Service[] = [
     name: 'José en acción',
     description: 'Encuentra colaboraciones, videos y podcasts.',
     link: '/jose-en-accion',
-    active: false,
+    active: true,
   },
 ] as const;
