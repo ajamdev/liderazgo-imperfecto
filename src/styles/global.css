@@ -6,7 +6,7 @@
   --color-text: #1E2B3A;
   --color-dark-green: #194138;
   --color-lightgreen: #63B983;
-  --color-amarillo-mostaza: #E0A857;
+  --color-amarillo-mostaza: #E1AA57;
 
   /* font size */
   --text-hero: clamp(var(--text-5xl), 5vw, var(--text-6xl));
@@ -14,6 +14,9 @@
   --text-headding3: clamp(var(--text-xl), 5vw, var(--text-2xl));
 }
 
+html{
+  scroll-behavior: smooth;
+}
 
 body {
   background-color: var(--color-base);
