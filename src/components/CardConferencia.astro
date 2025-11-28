@@ -1,0 +1,16 @@
+---
+interface Conferencias{
+  title: string;
+  description: string;
+}
+const { title, description} = Astro.props as Conferencias; 
+---
+
+<li>
+  <article class="h-full w-full p-6 shadow-xl rounded-xl bg-gray-50">
+    <header>
+      <h3 class="text-heading3 font-semibold text-balance my-[1em]">{title}</h3>
+    </header>
+    <p class="my-[1em] text-pretty">{description}</p>
+  </article>
+</li>
