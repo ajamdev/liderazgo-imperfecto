@@ -1,7 +1,7 @@
 export interface Link {
   link: string;
   title: string;
-  icon?: {
+  icon: {
     name: any;
   }
   active: boolean;
