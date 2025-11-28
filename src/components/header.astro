@@ -8,12 +8,12 @@ import ChevronDown from '@/assets/icons/chevron-down.svg'
 <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-transparent" id="menu">
   <div class="container mx-auto p-4 md:px-20 xl:px-40 flex justify-between items-center">
     <a href="/"> <Liderazgo class="w-auto h-10"/> </a>
-    <nav>
+    <nav class="flex space-x-5 items-center">
       <ul class="flex space-x-5">
-        <li><HeaderLink href="/">Inicio</HeaderLink></li>
+        <li><HeaderLink href="/nosotros">Nosotros</HeaderLink></li>
         <li class="relative group">
           <div class="cursor-pointer flex items-center space-x-4"><span>Que ofrecemos</span> <ChevronDown class="size-4 group-hover:rotate-180 transform transition-all duration-300" /></div>
-          <ul class="absolute bg-yellow-200 w-64 top-8 p-4 space-y-5 rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+          <ul class="absolute bg-text text-gray-50 w-64 top-11 p-4 space-y-5 rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
             {
               LINK.map(({link, title, active})=>(
           <li>
@@ -27,8 +27,9 @@ import ChevronDown from '@/assets/icons/chevron-down.svg'
             }
           </ul>
         </li>
-        <li><HeaderLink href="/nosotros">Nosotros</HeaderLink></li>
+        
       </ul>
+      <a href="/contacto" class="px-4 py-2 bg-amarillo-mostaza rounded-lg font-semibold">Contacto</a>
     </nav>
   </div>
 </header>
