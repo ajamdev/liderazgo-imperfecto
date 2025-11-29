@@ -32,20 +32,20 @@ const PILARES = [
     </div>
     <div>
       <header>
-        <h2 class="text-heading2 font-semibold italic text-balance my-[0.83em]">Cómo trabajamos juntos para potenciar tu desarrollo</h2>
+        <h2 class="text-heading2 font-Season-mix text-balance my-[0.83em]">Cómo trabajamos juntos para potenciar tu desarrollo</h2>
       </header>
       <p class="my-[1em] text-pretty">Desarrolla todo tu potencial como líder y genera nuevos aprendizajes.</p>
       <p class="my-[1em] text-pretty">Mi proceso se focaliza en diseñar un plan de desarrollo con acciones concretas, acorde a la particularidad de cada colaborador y al entorno organizacional que está viviendo, dentro de un ambiente seguro.</p>
     </div>
   </div>
-  <h3 class="text-headding3 font-bold italic my-[1em]">Los pilares de nuestra metodología</h3>
+  <h3 class="text-headding3 font-Season-mix my-[1em]">Los pilares de nuestra metodología</h3>
   <ul class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 my-5">
     {
       PILARES.map(({title, description, className})=>(
         <li>
           <article class={`h-full p-6 shadow-lg rounded-lg relative before:content-[''] before:absolute before:inset-0 before:bg-[url('../assets/isotipo.svg')] before:bg-no-repeat before:bg-right before:opacity-25 before:pointer-events-none before:h-full before:w-full ${className}`}>
             <header>
-              <h4 class="my-[1.33em] font-semibold text-lg italic text-balance">{title}</h4>
+              <h4 class="my-[1.33em] font-Season-mix text-lg  text-balance">{title}</h4>
             </header>
             <div class="prose-p:my-[1em] prose-p:text-pretty" set:html={description} />
           </article>

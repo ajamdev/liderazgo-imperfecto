@@ -17,14 +17,14 @@ const BENEFITS = [
 ---
 
 <Section>
-  <h2 class="text-heading2 my-[0.83em] italic">Beneficios del Coaching Ejecutivo</h2>
+  <h2 class="text-heading2 my-[0.83em] font-Season-mix">Beneficios del Coaching Ejecutivo</h2>
   <p class="my-[1em]">El Coaching Ejecutivo ofrece una serie de beneficios clave para los líderes y sus equipos, incluyendo:</p>
   <ul class="grid grid-cols-1 md:grid-cols-3 gap-5 mt-6">
     {
       BENEFITS.map(({text, description}) => (
         <li class="p-6 h-full relative before:content-[''] before:absolute before:inset-0 before:w-full before:h-full before:bg-[url('../assets/isotipo.svg')] before:bg-no-repeat before:bg-center before:opacity-5 before:pointer-events-none bg-[#F1EEE9] rounded-lg shadow-md">
           <header>
-            <h3 class="text-headding3 italic my-[1em]">{text}</h3>
+            <h3 class="text-headding3 font-Season-mix  my-[1em]">{text}</h3>
           </header>
           <p class="text-pretty my-[1em]">{description}</p>
         </li>
