@@ -14,6 +14,23 @@
   --text-headding3: clamp(var(--text-xl), 5vw, var(--text-2xl));
 }
 
+ .line {
+   transition: all 0.3s ease;
+ }
+
+ .active .line:nth-child(1) {
+   transform: translateY(8px) rotate(45deg);
+ }
+
+ .active .line:nth-child(2) {
+   opacity: 0;
+   transform: translateX(-20px);
+ }
+
+ .active .line:nth-child(3) {
+   transform: translateY(-8px) rotate(-45deg);
+ }
+
 html{
   scroll-behavior: smooth;
 }
