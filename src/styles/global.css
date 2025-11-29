@@ -12,6 +12,8 @@
   --text-hero: clamp(var(--text-5xl), 5vw, var(--text-6xl));
   --text-heading2: clamp(var(--text-2xl), 5vw, var(--text-3xl));
   --text-headding3: clamp(var(--text-xl), 5vw, var(--text-2xl));
+
+  --font-Season-mix: 'Season Mix'
 }
 
  .line {
@@ -72,6 +74,14 @@ html{
   src: url('/fonts/season-sans/SeasonSans-TRIAL-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Season Mix';
+  src: url('/fonts/SeasonMix/SeasonMix-TRIAL-RegularItalic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
   font-display: swap;
 }
 
