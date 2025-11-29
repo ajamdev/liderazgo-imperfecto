@@ -25,7 +25,7 @@ export const LINK: Link[] = [
   {
     link: "coaching-ejecutivo-y-alineacion-de-equipo",
     title: "Coaching Ejecutivo y Alineación de Equipo",
-    active: false,
+    active: true,
     icon: {
       name: Coaching
     }
