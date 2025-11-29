@@ -1,0 +1,34 @@
+---
+import Section from "@/components/ui/Section.astro";
+const BENEFITS = [
+  {
+    text: "Alineación Interna",
+    description: "Fortalecemos la coherencia entre objetivos, valores y acciones de tu equipo, creando una dirección clara y compartida."
+  },
+  {
+    text: "Relaciones de Confianza",
+    description: "Construimos vínculos sólidos basados en comunicación auténtica, vulnerabilidad controlada y compromiso genuino."
+  },
+  {
+    text: "Alto Desempeño",
+    description: "Potenciamos el rendimiento colectivo a través de claridad de roles, accountability y desarrollo continuo."
+  }
+]
+---
+
+<Section>
+  <h2 class="text-heading2 my-[0.83em] italic">Beneficios del Coaching Ejecutivo</h2>
+  <p class="my-[1em]">El Coaching Ejecutivo ofrece una serie de beneficios clave para los líderes y sus equipos, incluyendo:</p>
+  <ul class="grid grid-cols-1 md:grid-cols-3 gap-5 mt-6">
+    {
+      BENEFITS.map(({text, description}) => (
+        <li class="p-6 h-full relative before:content-[''] before:absolute before:inset-0 before:w-full before:h-full before:bg-[url('../assets/isotipo.svg')] before:bg-no-repeat before:bg-center before:opacity-5 before:pointer-events-none bg-[#F1EEE9] rounded-lg shadow-md">
+          <header>
+            <h3 class="text-headding3 italic my-[1em]">{text}</h3>
+          </header>
+          <p class="text-pretty my-[1em]">{description}</p>
+        </li>
+      ))
+    }
+  </ul>
+</Section>
