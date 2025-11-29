@@ -1,0 +1,8 @@
+---
+interface CtaPrimary {
+  body: string;
+  href: string;
+}
+const { body, href } = Astro.props as CtaPrimary;
+---
+<a href={href} class="bg-amarillo-mostaza rounded-lg px-8 py-3 font-semibold mde:hover:opacity-50 transition-opacity duration-300">{body}</a>
