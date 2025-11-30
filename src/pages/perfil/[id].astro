@@ -25,10 +25,10 @@ const {Content} = await render(profile);
       <aside class="profile-sidebar">
         <section class="space-y-6">
           <figure class="overflow-hidden w-full h-100 aspect-9/16 rounded-xl">
-            <Image src={image} alt={title} width={512} height={180} class="w-full h-full object-cover" transition:name={`img-${slug}`}/>
+            <img src={image} alt={title} loading="lazy" decoding="async" class="w-full h-full object-cover" transition:name={`img-${slug}`}/>
           </figure>
           <header class="space-y-1.5">
-            <h2 class="text-[clamp(var(--text-xl),5vw,var(--text-2xl))] font-bold italic">{title}</h2>
+            <h2 class="font-Season-mix text text-h4 my-h2">{title}</h2>
             {
               job.map((item: string, index: number)=>(
               <small class=" font-semibold text-text/50">
@@ -56,7 +56,7 @@ const {Content} = await render(profile);
       </aside>
       <article class="profile-content">
         <header>
-          <h1 class="font-bold text-[clamp(var(--text-3xl),5vw,var(--text-4xl))] italic mb-6">Sobre {title}</h1>
+          <h1 class="font-bold text-h2 my-h1">Sobre {title}</h1>
         </header>
         <div class="prose max-w-full max-h-full"><Content/></div>
       </article>
