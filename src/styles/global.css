@@ -9,9 +9,26 @@
   --color-amarillo-mostaza: #E1AA57;
 
   /* font size */
-  --text-hero: clamp(var(--text-5xl), 5vw, var(--text-6xl));
-  --text-heading2: clamp(var(--text-2xl), 5vw, var(--text-3xl));
-  --text-headding3: clamp(var(--text-xl), 5vw, var(--text-2xl));
+  --text-h1: clamp(var(--text-5xl), 5vw, var(--text-6xl));
+  --spacing-h1: 0.67em;
+
+  --text-h2: clamp(var(--text-2xl), 5vw, var(--text-3xl));
+  --spacing-h2: 0.83em; 
+
+  --text-h3: clamp(var(--text-xl), 5vw, var(--text-2xl));
+  --spacing-h3: 1em;  
+
+  --text-h4: clamp(var(--text-lg), 3vw, var(--text-xl));
+  --spacing-h4: 1.33em; 
+
+  --text-h5: clamp(var(--text-base), 2vw, var(--text-lg));
+  --spacing-h5: 1.67em; 
+
+  --text-h6: clamp(var(--text-sm), 1.5vw, var(--text-base));
+  --spacing-h6: 2.33em;
+
+  --text-p: clamp(var(--text-base), 1vw, var(--text-lg));
+  --spacing-p: 1em; 
 
   --font-Season-mix: 'Season Mix'
 }
