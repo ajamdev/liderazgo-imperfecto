@@ -1,4 +1,6 @@
 ---
+import CtaPrimary from "../ui/CtaPrimary.astro";
+import CtaSecondary from "../ui/CtaSecondary.astro";
 import Section from "../ui/Section.astro";
 import { Image } from 'astro:assets';
 ---
@@ -14,11 +16,12 @@ import { Image } from 'astro:assets';
   <div class="grid grid-cols-1 md:grid-cols-2 w-full h-full gap-5">
     <div class="w-full h-full flex flex-col justify-center">
       <header>
-        <h1 class="font-bold text-[clamp(var(--text-4xl),5vw,var(--text-6xl))] text-balance mb-[0.67em]">Inspira, transforma y lidera</h1>
+        <h1 class="font-bold text-h1 my-h1">Inspira, transforma y lidera</h1>
       </header>
-      <p class="text-pretty mb-6">Potencia tu equipo y transforma tu empresa con un liderazgo auténtico.</p>
-      <footer>
-        <a href="/contacto" class="bg-orange-400 font-bold px-4 py-2 text-base rounded-lg">Conversemos</a>
+      <p class="text-pretty text-p my-p">Potencia tu equipo y transforma tu empresa con un liderazgo auténtico.</p>
+      <footer class="flex flex-col md:flex-row pt-6 gap-5">
+        <CtaPrimary href="#servicios" body="Descubre mis servicios"/>
+        <CtaSecondary href="/contacto" body="Conversemos"/>
       </footer>
     </div>
     <div class="w-full h-full flex flex-col justify-end relative overflow-hidden">
