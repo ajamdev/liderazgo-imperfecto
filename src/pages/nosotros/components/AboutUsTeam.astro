@@ -1,0 +1,38 @@
+---
+import CtaPrimary from '@/components/ui/CtaPrimary.astro';
+import Section from '@/components/ui/Section.astro';
+import { getCollection } from 'astro:content';
+const profile = await getCollection('profile');
+---
+
+<Section id="equipo" class="">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+    {
+      profile.map((profile: any) => {
+        const { slug, data } = profile;
+        const { image, title, description } = data;
+        return (
+          <article class="overflow-hidden rounded-xl block shadow-lg group">
+            <div class="overflow-hidden">
+              <img
+                src={image}
+                alt={`foto de ${title}`}
+                transition:name={`img-${slug}`}
+                loading="lazy"
+                decoding="async"
+                class="aspect-video object-top object-cover transition-all transform group-hover:scale-110 duration-300"
+              />
+            </div>
+            <div class="space-y-5 p-5">
+              <div class="">
+                <h2 class="font-Season-mix text text-h4 my-h2">{title}</h2>
+                <p class="text-p my-p text-pretty">{description}</p>
+              </div>
+              <CtaPrimary class="mt-8" href={`/perfil/${slug}`} body="Conocenos más" />
+            </div>
+          </article>
+        );
+      })
+    }
+  </div>
+</Section>
