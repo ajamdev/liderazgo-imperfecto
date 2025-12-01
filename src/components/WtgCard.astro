@@ -1,0 +1,20 @@
+---
+import Check from "@/assets/icons/check.svg";
+interface Wtg {
+  name: string;
+  description: string;
+}
+const {name, description} = Astro.props as Wtg;
+---
+
+<li>
+  <article class="flex space-x-4 w-full h-full p-6 rounded-xl bg-base border border-amarillo-mostaza/30">
+    <div class="bg-amarillo-mostaza size-10 p-2 rounded-md flex items-center justify-center ">
+      <Check class="size-5"/>
+    </div>
+    <div>
+      <h3 class="font-Season-mix text-h3 mb-h3 text-balance">{name}</h3>
+      <p class="text-pretty text-p my-p">{description}</p>
+    </div>
+  </article>
+</li>
