@@ -1,0 +1,24 @@
+---
+import Section from '@/components/ui/Section.astro';
+import CtaPrimary from '@/components/ui/CtaPrimary.astro';
+import CtaSecondary from '@/components/ui/CtaSecondary.astro';
+---
+
+<Section class="h-dvh pt-12">
+  <div class="w-full h-full grid grid-cols-1 md:grid-cols-2 gap-5 items-center">
+    <div>
+      <header>
+        <h1 class="text-h1 font-bold text-balance my-h1">Llamada de emergencia</h1>
+      </header>
+      <p class="my-p text-p text-pretty">
+        Una opción para atender y resolver situaciones puntuales asociadas a los retos que enfrenta el líder, tales como: feedback
+        desafiante, conflicto entre miembros del equipo, gestión de errores, sesgos propios y del equipo, baja productividad, entre otros.
+      </p>
+      <footer class="pt-6 flex flex-col md:flex-row gap-5">
+        <CtaPrimary href="#Call" body="Solicitar llamada ahora"/>
+        <CtaSecondary href="/contacto" body="Más información"/>
+      </footer>
+    </div>
+    <div></div>
+  </div>
+</Section>
