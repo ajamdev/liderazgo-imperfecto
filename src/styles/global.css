@@ -50,9 +50,7 @@
    transform: translateY(-8px) rotate(-45deg);
  }
 
-html{
-  scroll-behavior: smooth;
-}
+
 
 @font-face {
   font-family: 'Season Sans';
@@ -102,6 +100,10 @@ html{
   font-display: swap;
 }
 
+html {
+  scroll-behavior: smooth;
+
+}
 body {
   background-color: var(--color-base);
   color: var(--color-text);
