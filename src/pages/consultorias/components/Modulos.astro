@@ -1,20 +1,21 @@
 ---
 import CardConferencia from "@/components/CardConferencia.astro";
+import CtaPrimary from "@/components/ui/CtaPrimary.astro";
 import Section from "@/components/ui/Section.astro";
 import { CONFERENCIA } from "@/lib/const/conferens";
 ---
 
 <Section>
   <header>
-    <h2 class="text-heading2 font-Season-mix my-[0.87em]">Beneficios Tangibles para su Organización</h2>
+    <h2 class="text-h2 font-Season-mix my-h2">Beneficios Tangibles para su Organización</h2>
   </header>
   <ul class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 my-6">
     {
       CONFERENCIA.map((modulo)=><CardConferencia {...modulo} />)
     }
   </ul>
-  <footer class="flex flex-col items-center">
-    <p class="text-center text-gray-500 my-[1em]">Estos módulos están diseñados para proporcionar un valor tangible y sostenible a su organización.</p>
-    <a href="#" class="bg-amarillo-mostaza font-semibold px-4 py-2 rounded-xl">Agenda una cita</a>
+  <footer class="flex flex-col items-center pt-5">
+    <p class="text-center text-gray-500 my-p text-p">Estos módulos están diseñados para proporcionar un valor tangible y sostenible a su organización.</p>
+    <CtaPrimary href="#" body="Agenda una cita" />
   </footer>
 </Section>
