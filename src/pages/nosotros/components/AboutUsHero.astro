@@ -1,0 +1,25 @@
+---
+import CtaPrimary from '@/components/ui/CtaPrimary.astro';
+import CtaSecondary from '@/components/ui/CtaSecondary.astro';
+import Section from '@/components/ui/Section.astro';
+---
+
+<Section class="h-dvh pt-12">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-5 items-center h-full w-full">
+    <div>
+      <header>
+        <h1 class="text-h1 my-h1 font-bold">Sobre Nosotros</h1>
+      </header>
+      <p class="text-pretty text-p my-p">
+        Somos un equipo que combina la cabeza puesta en el negocio con el corazón bien plantado en las personas. Nos mueve una obsesión:
+        transformar líderes y organizaciones desde adentro. Llevamos años decantando experiencia real —de corporaciones, industrias y
+        culturas distintas— para convertirla en herramientas que sirvan, no en teorías que decoran.
+      </p>
+      <footer class="flex flex-col md:flex-row gap-5 pt-5">
+        <CtaPrimary href="/contacto" body="Contáctanos" />
+        <CtaSecondary href="/faq" body="Preguntas Frecuentes" />
+      </footer>
+    </div>
+    <div></div>
+  </div>
+</Section>
