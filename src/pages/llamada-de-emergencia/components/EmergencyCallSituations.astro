@@ -1,0 +1,17 @@
+---
+import Section from '@/components/ui/Section.astro';
+import { SITUATIONS } from '@/lib/const/situations';
+import CardSituations from '@/components/CartSituations.astro';
+---
+
+<Section>
+  <header>
+    <h2 class="text-h2 font-Season-mix my-h2">Situaciones que Podemos Resolver</h2>
+  </header>
+  <p class="text-p my-p text-balance">Retos puntuales que todo líder enfrenta y que requieren atención especializada</p>
+  <ul class="pt-6 grid grid-cols-1 md:grid-cols-3 gap-5">
+    {
+      SITUATIONS.map((situation)=> <CardSituations {...situation} />)
+    }
+  </ul>
+</Section>
