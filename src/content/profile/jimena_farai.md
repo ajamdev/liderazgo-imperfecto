@@ -7,12 +7,10 @@ description: Psicóloga y Coach Ejecutiva. Apasionada por el liderazgo conscient
 image: https://joseecheverri.com/wp-content/uploads/2025/11/jimena_farai.webp
 ---
 
-Me gusta buscar en mi interior. Me asombro aún con las cosas como cuando era una niña. Pienso que cultivar la autoconciencia, la espiritualidad y la salud son la tríada del bienestar. Creo en los nuevos comienzos y posibilidades. Me deslumbra lo que sucede cuando tocamos fondo y la transformación que logramos cuando queremos salir a la superficie a tomar aire.
+Soy Jimena. Me mueven las preguntas más que las respuestas. Me asombro como una niña y creo profundamente en las segundas oportunidades.
 
-Esa capacidad transformadora despertó mi interés por formarme como Psicóloga. Conectar con las personas de una forma más profunda, hacerlo como Coach Ejecutiva.
+Soy psicóloga y coach ejecutiva, con una brújula interna que apunta hacia la autoconciencia, la salud y la espiritualidad como pilares del bienestar.
 
-Quiero ayudar a que cada vez más personas, especialmente en el mundo corporativo, aprendan a disfrutar el transitar en vez de disfrutar solo el lugar de llegada. Por eso, en mis últimos años me sumergí en temas de Liderazgo para el desarrollo de Ambientes de Seguridad Psicológica, Equidad, Diversidad e Inclusión, siendo estos la piedra angular para que líderes y equipos puedan re-escribir los capítulos de su vida corporativa, que al final es un reflejo de la vida.
+Acompaño a líderes y equipos en el tránsito —no en la llegada—, ayudándoles a crear espacios donde la diversidad, la equidad y la seguridad psicológica no sean iniciativas, sino prácticas vivas.
 
-Lo que soy se lo debo en gran parte a las personas que me han rodeado: líderes, alumnos, amigos, coachees - y por supuesto mis compañeros de viaje: mi esposo Jose, y mis hijos Sami y Gabi- todos y cada uno me han inspirado con sus experiencias y forma de asumir la vida.
-
-Mi gran deseo: mantener mi asombro frente a lo que las personas podemos lograr.
+Mi mayor inspiración: las personas que me rodean, mis coachees, mis compañeros de vida —especialmente Jose, Sami y Gabi— y todos aquellos que se atreven a tocar fondo para volver a salir con más verdad.

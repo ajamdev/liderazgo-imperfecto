@@ -5,7 +5,7 @@ import { getCollection } from 'astro:content';
 const profile = await getCollection('profile');
 ---
 
-<Section id="equipo" class="">
+<Section id="equipo">
   <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
     {
       profile.map((profile: any) => {
@@ -28,7 +28,9 @@ const profile = await getCollection('profile');
                 <h2 class="font-Season-mix text text-h4 my-h2">{title}</h2>
                 <p class="text-p my-p text-pretty">{description}</p>
               </div>
-              <CtaPrimary class="mt-8" href={`/perfil/${slug}`} body="Conocenos más" />
+              <footer class="pt-5">
+                <CtaPrimary class="mt-8" href={`/perfil/${slug}`} body="Conócenos más" />
+              </footer>
             </div>
           </article>
         );
