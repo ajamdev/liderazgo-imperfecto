@@ -23,7 +23,7 @@ export const LINK: Link[] = [
     }
   },
   {
-    link: "coaching-ejecutivo-y-alineacion-de-equipo",
+    link: "/coaching-ejecutivo-y-alineacion-de-equipo",
     title: "Coaching Ejecutivo y Alineación de Equipo",
     active: true,
     icon: {
@@ -31,9 +31,9 @@ export const LINK: Link[] = [
     }
   },
   {
-    link: "/Llamada-de-emergencia",
+    link: "/llamada-de-emergencia",
     title: "Llamada de Emergencia",
-    active: false,
+    active: true,
     icon: {
       name: Llamada
     }
