@@ -1,0 +1,13 @@
+---
+import ProcessCard from '@/components/ProcessCard.astro';
+import Section from '@/components/ui/Section.astro';
+import { processes } from '@/lib/const/process';
+---
+
+<Section>
+  <h2 class="text-h2 font-Season-mix my-h2 text-balance">Nuestro Proceso de Transformación</h2>
+  <p class="text-p my-p text-pretty">Un enfoque estructurado basado en la autenticidad y la acción rápida</p>
+  <ul class="pt-6 grid grid-cols-1 md:grid-cols-4 gap-5">
+    {processes.map((process)=><ProcessCard {...process} />)}
+  </ul>
+</Section>
