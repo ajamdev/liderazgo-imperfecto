@@ -1,0 +1,20 @@
+---
+interface Process {
+  id: string;
+  name: string;
+  description: string;
+  number: number;
+}
+
+const { name , description, number } = Astro.props as Process;
+---
+
+<li>
+  <article class="flex flex-col items-center justify-center p-6 rounded-xl h-full w-full">
+    <span class="size-8 bg-amarillo-mostaza text-center p-2 rounded-full">{number}</span>
+    <header>
+      <h3 class="text-h3 my-h3 font-Season-mix text-balance">{name}</h3>
+    </header>
+    <p class="text-center text-p my-p text-pretty">{description}</p>
+  </article>
+</li>
