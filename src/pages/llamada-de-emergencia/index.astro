@@ -1,7 +1,17 @@
 ---
 import Base from '@/layout/Base.astro'
+import EmergencyCallHero from './components/EmergencyCallHero.astro'
+import EmergencyCallPrefooter from './components/EmergencyCallPrefooter.astro'
+import EmergencyCallProcess from './components/EmergencyCallProcess.astro'
+import EmergencyCallSituations from './components/EmergencyCallSituations.astro'
+import EmergencyCallWtg from './components/EmergencyCallWtg.astro'
 ---
 <Base title="Llamada de emergencia">
   <main>
+    <EmergencyCallHero />
+    <EmergencyCallSituations />
+    <EmergencyCallProcess />
+    <EmergencyCallWtg />
+    <EmergencyCallPrefooter />
   </main>
 </Base>
