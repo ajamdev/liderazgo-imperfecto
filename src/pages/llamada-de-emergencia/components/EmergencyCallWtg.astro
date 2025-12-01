@@ -1,0 +1,13 @@
+---
+import Section from '@/components/ui/Section.astro';
+import WtgCard from '@/components/WtgCard.astro';
+import { WTG_LIST } from '@/lib/const/wtg';
+---
+
+<Section>
+  <h2 class="font-Season-mix my-h2 text-h2">¿Qué Obtienes?</h2>
+  <p class="my-p text-pretty text-p">Beneficios tangibles que transformarán tu situación inmediatamente</p>
+  <ul class="grid grid-cols-1 md:grid-cols-2 gap-5 items-center pt-6">
+    {WTG_LIST.map((wtg)=><WtgCard {...wtg} />)}
+  </ul>
+</Section>
