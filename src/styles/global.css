@@ -2,11 +2,13 @@
 @plugin '@tailwindcss/typography';
 
 @theme {
-  --color-base: #F4EFE3;
-  --color-text: #1E2B3A;
-  --color-dark-green: #194138;
-  --color-lightgreen: #63B983;
-  --color-amarillo-mostaza: #E1AA57;
+  --color-base: hsl(42 43.6% 92.4%);
+  --color-text: hsl(212 31.8% 17.3%);
+  --color-dark-green: hsl(167 44.4% 17.6%);
+  --color-lightgreen: hsl(142 38.1% 55.7%);
+  --color-amarillo-mostaza: hsl(36 69.7% 61.2%);
+
+  --color-base-dark:hsl(42 18.5% 68.2%);
 
   /* font size */
   --text-h1: clamp(var(--text-5xl), 5vw, var(--text-6xl));
