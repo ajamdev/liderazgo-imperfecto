@@ -1,0 +1,29 @@
+---
+interface Structure {
+  title: string;
+  description: string;
+  list: string[];
+  className?: string;
+}
+const { title, description, list, className } = Astro.props as Structure;
+---
+
+<li>
+  <article class={`p-6 w-full h-full ${className}`}>
+    <header>
+      <h3 class="text-h3 font-Season-mix my-h3 text-balance">{title}</h3>
+    </header>
+    <p class="text-p my-p text-pretty">{description}</p>
+    <h4 class="text-h4 my-h4 font-Season-mix">Temas a tratar:</h4>
+    <ul class="list-inside">
+      {
+        list.map((item) => (
+          <li class="space-x-4 mb-2">
+            <span class="text-amarillo-mostaza">▷</span>
+            <span>{item}</span>
+          </li>
+        ))
+      }
+    </ul>
+  </article>
+</li>

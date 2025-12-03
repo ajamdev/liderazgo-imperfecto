@@ -1,0 +1,15 @@
+---
+import Section from '@/components/ui/Section.astro';
+import WorkshopsFundamentalCard from '@/components/WorkshopsFundamentalCard.astro';
+import { FUNDAMENTS_LIST } from '@/lib/const/fundamentos';
+---
+
+<Section>
+  <header>
+    <h2 class="text-h2 font-Season-mix my-h2 text-balance">Fundamentos de seguridad psicológica</h2>
+  </header>
+  <p class="text-p my-p text-pretty">Transformamos organizaciones mediante la construcción de espacios seguros donde el talento prospera</p>
+  <ul class="pt-6 grid grid-cols-1 md:grid-cols-2 gap-5">
+    {FUNDAMENTS_LIST.map((fundamental)=><WorkshopsFundamentalCard {...fundamental} />)}
+  </ul>
+</Section>

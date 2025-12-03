@@ -1,0 +1,13 @@
+---
+import Section from '@/components/ui/Section.astro';
+import WorkshopStructureCard from '@/components/WorkshopStructureCard.astro';
+import { workshopStructure } from '@/lib/const/workshop-structure';
+---
+
+<Section>
+  <header><h2 class="text-h2 text-balance my-h2 font-Season-mix">Estructura de los Talleres</h2></header>
+  <p class="text-p my-p text-pretty">Cuatro módulos diseñados para transformar tu organización desde adentro.</p>
+  <ul class="grid grid-cols-1 md:grid-cols-2 mt-6 border-2 border-amarillo-mostaza/30 rounded-xl overflow-hidden">
+    {workshopStructure.map((fundamentos)=><WorkshopStructureCard {...fundamentos} />)}
+  </ul>
+</Section>

@@ -1,0 +1,25 @@
+---
+interface Fundamental {
+  name: string;
+  description: string;
+  icon: {
+    name: any;
+  };
+}
+
+const { name, description, icon } = Astro.props as Fundamental;
+---
+
+<li class="overflow-hidden group rounded-xl">
+  <article
+    class="w-full h-full bg-lightgreen group-hover:-translate-y-1.5 duration-300 group-hover:shadow-xl rounded-xl transition-all relative before:content-[''] before:absolute before:inset-0 before:bg-[url('../assets/icons/crecimiento-imperfecto.svg')] before:bg-no-repeat before:bg-right before:opacity-25 before:pointer-events-none before:h-full before:w-full text-dark-green"
+  >
+    <div class="w-full h-full p-6">
+      <icon.name class="size-10 p-2 bg-dark-green text-lightgreen rounded-lg" />
+      <div>
+        <h3 class="text-h3 my-h3 font-Season-mix text-balance">{name}</h3>
+      </div>
+      <p class="text-p my-p text-pretty">{description}</p>
+    </div>
+  </article>
+</li>

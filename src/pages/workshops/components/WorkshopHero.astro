@@ -1,0 +1,24 @@
+---
+import Section from '@/components/ui/Section.astro';
+import CtaPrimary from '@/components/ui/CtaPrimary.astro';
+import CtaSecondary from '@/components/ui/CtaSecondary.astro';
+---
+
+<Section class="h-dvh pt-12">
+  <div class="grid grid-cols md:grid-cols-2 gap-5 items-center h-full">
+    <div>
+      <header>
+        <h1 class="text-h1 my-h1 font-bold text-balance">Workshops sobre Seguridad Psicológica para la transformación.</h1>
+      </header>
+      <p class="my-p text-p text-pretty">
+        Una serie de talleres diseñados para acompañar a las organizaciones y sus lideres, tomando la seguridad psicológica como motor para
+        la innovación y el alto desempeño.
+      </p>
+      <nav class="pt-6 flex flex-col md:flex-row gap-5" aria-label="Acciones principales">
+        <CtaPrimary body="Solicita tu workshop" />
+        <CtaSecondary body="Agenda una consulta" />
+      </nav>
+    </div>
+    <aside class="hero-media" aria-label="Contenido visual"></aside>
+  </div>
+</Section>
