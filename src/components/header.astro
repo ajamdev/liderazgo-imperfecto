@@ -1,36 +1,43 @@
 ---
-import Liderazgo from '@/assets/liderazgo-imperfecto.svg'
-import HeaderLink from "./HeaderLink.astro";
+import Liderazgo from '@/assets/liderazgo-imperfecto.svg';
+import HeaderLink from './HeaderLink.astro';
 import { LINK } from '@/lib/const/link';
-import ChevronDown from '@/assets/icons/chevron-down.svg'
+import ChevronDown from '@/assets/icons/chevron-down.svg';
 ---
 
 <header class="hidden md:block fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-transparent" id="menu">
   <div class="container mx-auto p-4 md:px-20 xl:px-40 flex justify-between items-center">
-    <a href="/"> <Liderazgo class="w-auto h-10"/> </a>
+    <a href="/"> <Liderazgo class="w-auto h-10" /> </a>
     <nav class="flex space-x-5 items-center">
       <ul class="flex space-x-5">
         <li><HeaderLink class="hover:border-b-2 transition-all duration-100" href="/nosotros">Nosotros</HeaderLink></li>
         <li class="relative group">
-          <div class="cursor-pointer flex group-hover:delay-700 items-center space-x-4"><span>Que ofrecemos</span> <ChevronDown class="size-4 group-hover:rotate-180 transform transition-all duration-300" /></div>
-          <ul class="absolute bg-text text-gray-50 w-96 translate-x-1/2 top-11 right-0 p-4 space-y-5 rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+          <div class="cursor-pointer flex group-hover:delay-700 items-center space-x-4">
+            <span>Que ofrecemos</span>
+            <ChevronDown class="size-4 group-hover:rotate-180 transform transition-all duration-300" />
+          </div>
+          <ul
+            class="absolute bg-text text-gray-50 w-96 translate-x-1/2 top-11 right-0 p-4 space-y-5 rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300"
+          >
             {
-              LINK.map(({link, title, active, icon})=>(
-          <li>
-            {active ? (
-            <HeaderLink class="inline-flex items-center space-x-4 w-full h-full p-2 hover:border-b-2 hover:border-b-amarillo-mostaza transition-all duration-300" href={link}><span><icon.name /></span><span>{title}</span></HeaderLink>
-            ) : (
-            <div class="flex space-x-4 items-center">
-              <span><icon.name /></span>
-              <span class="inline-block w-full h-full p-2 opacity-50 cursor-not-allowed">{title}</span>
-            </div>
-            )}
-          </li>
+              LINK.map(({ link, title, icon }) => (
+                <li>
+                  <HeaderLink
+                    class="inline-flex items-center space-x-4 w-full h-full p-2 hover:border-b-2 hover:border-b-amarillo-mostaza transition-all duration-300"
+                    href={link}
+                  >
+                    <>
+                      <span>
+                        <icon.name />
+                      </span>
+                      <span>{title}</span>
+                    </>
+                  </HeaderLink>
+                </li>
               ))
             }
           </ul>
         </li>
-        
       </ul>
       <a href="/contacto" class="px-4 py-2 bg-amarillo-mostaza rounded-lg font-semibold">Contacto</a>
     </nav>
@@ -39,27 +46,44 @@ import ChevronDown from '@/assets/icons/chevron-down.svg'
 
 <header class="md:hidden fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-transparent" id="menu-mobile">
   <div class="container mx-auto p-4 flex justify-between items-center">
-    <a href="/"> <Liderazgo class="w-auto h-10"/></a>
+    <a href="/"> <Liderazgo class="w-auto h-10" /></a>
     <nav class="relative">
-      <div id="burger" class="w-16 h-16 bg-white rounded-xl shadow-2xl flex flex-col justify-center items-center gap-1.5 p-4 hover:scale-105 active:scale-95 transition-transform duration-200 cursor-pointer">
-      <span class="line w-8 h-0.5 bg-text rounded-full"></span>
-      <span class="line w-8 h-0.5 bg-text rounded-full"></span>
-      <span class="line w-8 h-0.5 bg-text rounded-full"></span>
+      <div
+        id="burger"
+        class="w-16 h-16 bg-white rounded-xl shadow-2xl flex flex-col justify-center items-center gap-1.5 p-4 hover:scale-105 active:scale-95 transition-transform duration-200 cursor-pointer"
+      >
+        <span class="line w-8 h-0.5 bg-text rounded-full"></span>
+        <span class="line w-8 h-0.5 bg-text rounded-full"></span>
+        <span class="line w-8 h-0.5 bg-text rounded-full"></span>
       </div>
       <ul id="mobile-menu" class="hidden fixed top-20 left-0 w-full bg-text shadow-lg flex-col space-y-5 p-6">
-      <li><HeaderLink class="hover:border-b-2 transition-all duration-100 mobile-link text-gray-50" href="/nosotros">Nosotros</HeaderLink></li>
-      <li class="">
-        <button id="submenu-toggle" class="cursor-pointer flex items-center space-x-4 w-full text-gray-50"><span>Que ofrecemos</span> <ChevronDown class="size-4 transform transition-all duration-300" id="submenu-icon" /></button>
-        <ul id="submenu" class="hidden bg-text text-gray-50 p-4 space-y-5 rounded-lg mt-2">
-        {
-          LINK.map(({link, title, active, icon})=>(
         <li>
-          <HeaderLink class="inline-flex items-center space-x-4 w-full h-full p-2 hover:border-b-2 hover:border-b-amarillo-mostaza transition-all duration-300 mobile-link" href={link}><span><icon.name /></span><span>{title}</span></HeaderLink>
+          <HeaderLink class="hover:border-b-2 transition-all duration-100 mobile-link text-gray-50" href="/nosotros">Nosotros</HeaderLink>
         </li>
-          ))
-        }
-        </ul>
-      </li>
+        <li class="">
+          <button id="submenu-toggle" class="cursor-pointer flex items-center space-x-4 w-full text-gray-50"
+            ><span>Que ofrecemos</span> <ChevronDown class="size-4 transform transition-all duration-300" id="submenu-icon" /></button
+          >
+          <ul id="submenu" class="hidden bg-text text-gray-50 p-4 space-y-5 rounded-lg mt-2">
+            {
+              LINK.map(({ link, title, active, icon }) => (
+                <li>
+                  <HeaderLink
+                    class="inline-flex items-center space-x-4 w-full h-full p-2 hover:border-b-2 hover:border-b-amarillo-mostaza transition-all duration-300 mobile-link"
+                    href={link}
+                  >
+                    <>
+                      <span>
+                        <icon.name />
+                      </span>
+                      <span>{title}</span>
+                    </>
+                  </HeaderLink>
+                </li>
+              ))
+            }
+          </ul>
+        </li>
         <li><a href="/contacto" class="px-4 py-2 bg-amarillo-mostaza rounded-lg font-semibold">Contacto</a></li>
       </ul>
     </nav>
