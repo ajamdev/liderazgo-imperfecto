@@ -9,7 +9,6 @@ export const LINK: Link[] = [
   {
     link: "/mentoria-ejecutiva",
     title: "Mentoría Ejecutiva",
-    active: true,
     icon:{
       name: Mentoria
     }
@@ -17,7 +16,6 @@ export const LINK: Link[] = [
   {
     link: "/consultorias",
     title: "Consultorías",
-    active: true,
     icon: {
       name: Consultorias  
     }
@@ -25,7 +23,6 @@ export const LINK: Link[] = [
   {
     link: "/coaching-ejecutivo-y-alineacion-de-equipo",
     title: "Coaching Ejecutivo y Alineación de Equipo",
-    active: true,
     icon: {
       name: Coaching
     }
@@ -33,7 +30,6 @@ export const LINK: Link[] = [
   {
     link: "/llamada-de-emergencia",
     title: "Llamada de Emergencia",
-    active: true,
     icon: {
       name: Llamada
     }
@@ -41,7 +37,6 @@ export const LINK: Link[] = [
   {
     link: "/workshops",
     title: "Workshops sobre Seguridad Psicológica para la transformación",
-    active: false,
     icon: {
       name: Workshops
     }

@@ -4,5 +4,4 @@ export interface Link {
   icon: {
     name: any;
   }
-  active: boolean;
 }
