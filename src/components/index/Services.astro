@@ -8,15 +8,16 @@ import {SERVICES} from '@/lib/const/services'
   </header>
   <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
     {
-      SERVICES.map(({id, name, description, link, active})=>(
+      SERVICES.map(({id, name, description, link, active, icon})=>(
         <a href={active ? undefined : link} aria-disabled={active}>
-          <article id={id} class="p-6 bg-dark-green  h-80 w-full rounded-xl flex flex-col justify-end">
+          <article id={id} class="p-6 bg-lightgreen h-full w-full rounded-xl flex flex-col justify-end md:hover:-translate-y-1 duration-300 transition-all md:hover:shadow-lg">
             {active && ( <span class="inline-flex items-center px-2 py-1 text-xs font-medium bg-orange-100 text-orange-800 rounded-full max-w-max">Próximamente</span>)}
             <div class="space-y-6">
+              <icon.name class="size-9 bg-dark-green p-2 text-lightgreen rounded-lg"/>
               <header>
-                <h3 class="text-h4 font-Season-mix my-h3 text-balance text-lightgreen">{name}</h3>
+                <h3 class="text-h4 font-Season-mix my-h3 text-balance text-dark-green">{name}</h3>
               </header>
-              <p class="text-lightgreen">{description}</p>
+              <p class="text-dark-green">{description}</p>
             </div>
           </article>
         </a>
