@@ -12,4 +12,5 @@ type serviceId =
     description: string;
     link: string;
     active: boolean;
+    icon: {name: any};
   }
