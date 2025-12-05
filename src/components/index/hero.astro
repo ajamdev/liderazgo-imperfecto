@@ -5,7 +5,7 @@ import Section from "../ui/Section.astro";
 import { Image } from 'astro:assets';
 ---
 
-<Section class="h-dvh relative pt-10">
+<Section class="h-dvh relative pt-6">
   <Image 
   src="https://joseecheverri.com/wp-content/uploads/2025/11/Jose_echeverri.webp" 
   alt="Descripción de la imagen" 
@@ -25,7 +25,7 @@ import { Image } from 'astro:assets';
       </footer>
     </div>
     <div class="w-full h-full flex flex-col justify-end relative overflow-hidden">
-      <Image src="https://joseecheverri.com/wp-content/uploads/2025/11/Jose_echeverri.webp" alt="Descripción de la imagen" width={800} height={600} class="absolute inset-0 w-auto h-full object-cover"/>
+      <Image src="https://joseecheverri.com/wp-content/uploads/2025/11/Jose_echeverri.webp" alt="Descripción de la imagen" width={800} height={600} class="absolute inset-0 w-auto h-full object-cover hidden md:block"/>
       <lite-youtube videoid="5FkJPrCMbMY"></lite-youtube>
     </div>
   </div>
