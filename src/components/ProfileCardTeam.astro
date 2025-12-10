@@ -1,0 +1,33 @@
+---
+import CtaPrimary from "./ui/CtaPrimary.astro"
+
+interface Profile {
+  title: string
+  content?: string
+  description: string
+  slug: string
+}
+
+const {title, content, description, slug} = Astro.props as Profile
+---
+<article class="overflow-hidden rounded-xl block shadow-lg group">
+  <div class="overflow-hidden">
+    <!-- <img
+      src={image}
+      alt={`foto de ${title}`}
+      transition:name={`img-${slug}`}
+      loading="lazy"
+      decoding="async"
+      class="aspect-video object-top object-cover transition-all transform group-hover:scale-110 duration-300"
+    /> -->
+  </div>
+  <div class="space-y-5 p-5">
+    <div class="">
+      <h2 class="font-Season-mix text text-h4 my-h2">{title}</h2>
+      <p class="text-p my-p text-pretty">{description}</p>
+    </div>
+    <footer class="pt-5">
+      <CtaPrimary class="mt-8" href={`/perfil/${slug}`} body="Conócenos más" />
+    </footer>
+  </div>
+</article>
