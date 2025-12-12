@@ -1,4 +1,12 @@
 import dna from "@/assets/icons/dna.svg"
+import boom from "@/assets/icons/boom.svg"
+import cristalBall from "@/assets/icons/cristal-ball.svg"
+import tools from "@/assets/icons/tools.svg"
+import target from "@/assets/icons/target.svg"
+import bulb from "@/assets/icons/bulb.svg"
+import earth from "@/assets/icons/earth.svg"
+import spiral from "@/assets/icons/spiral.svg"
+import bank from "@/assets/icons/bank.svg"
 
 interface Book {
   name: string;
@@ -33,7 +41,7 @@ export const BOOKS_INFO: Book[] = [
   {
     name: "Estratégia y Conocimiento del Entorno",
     icon: {
-      name: dna
+      name: boom
     },
     book: [
       { title: "The Coming Wave", author: "Mustafa Suleyman" },
@@ -51,7 +59,7 @@ export const BOOKS_INFO: Book[] = [
   {
     name: "Futuro del Trabajo y Modelos Emergentes",
     icon: {
-      name: dna
+      name: cristalBall
     },
     book: [
       { title: "The comming wave", author: "Mustafa Suleyman" },
@@ -69,7 +77,7 @@ export const BOOKS_INFO: Book[] = [
   {
     name: "Liderazgo Práctico",
     icon: {
-      name: dna
+      name: tools
     },
     book: [
       { title: "Cabeza, corazón y manos", author: "Alvaro González-Alorda" },
@@ -87,7 +95,7 @@ export const BOOKS_INFO: Book[] = [
   {
     name: "Ejecución, Talento y Rendimiento Organizacional",
     icon: {
-      name: dna
+      name: target
     },
     book: [
       { title: "The Alliance", author: "Reid Hoffman, Ben Casnocha" },
@@ -105,7 +113,7 @@ export const BOOKS_INFO: Book[] = [
   {
     name: "Productividad, Hábitos y Enfoque",
     icon: {
-      name: dna
+      name: bulb
     },
     book: [
       { title: "Deep Work", author: "Cal Newport" },
@@ -123,7 +131,7 @@ export const BOOKS_INFO: Book[] = [
   {
     name: "Humanismo y Sentido",
     icon: {
-      name: dna
+      name: earth
     },
     book: [
       { title: "El hombre en busca de sentido", author: "Victor Frankl" },
@@ -141,7 +149,7 @@ export const BOOKS_INFO: Book[] = [
   {
     name: "Filosofía, Existencialismo y Condición Humana",
     icon: {
-      name: dna
+      name: spiral
     },
     book: [
       { title: "La insoportable levedad del ser", author: "Milan Kundera" },
@@ -159,7 +167,7 @@ export const BOOKS_INFO: Book[] = [
   {
     name: "Grandes Clásicos y Visiones del Mundo",
     icon: {
-      name: dna
+      name: bank
     },
     book: [
       { title: "La Odisea", author: "Homero" },
