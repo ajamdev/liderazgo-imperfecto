@@ -6,7 +6,7 @@ import Books  from "@/assets/icons/books.svg"
 import Compass  from "@/assets/icons/compass.svg"
 import Hands from "@/assets/icons/hands.svg"
 
-export const SERVICES: Service[] = [
+export const SERVICES: readonly Service[] = [
   {
     id: 'liderazgo_imperfecto',
     name: 'Liderazgo Imperfecto',
@@ -36,7 +36,7 @@ export const SERVICES: Service[] = [
     name: 'La biblioteca del líder',
     description: 'Una  selección curada para el crecimiento personal',
     link: '/biblioteca-del-lider',
-    active: true,
+    active: false,
     icon: {name: Books},
   },
   {
