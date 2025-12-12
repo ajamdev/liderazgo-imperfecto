@@ -1,0 +1,28 @@
+---
+interface Book {
+  name: string;
+  icon: {
+    name: any
+  }
+  book: {
+    title: string;
+    author: string;
+  }[]
+}
+const { name, icon, book } = Astro.props as Book;
+---
+
+
+  <article class="w-full h-full">
+    <div class="flex items-center space-x-1 p-2 bg-lightgreen text-dark-green">
+      <icon.name class="size-10" />
+      <h3 class="text-balance text-h3 font-Season-mix">{name}</h3>
+    </div>
+    {
+      book.map(({author, title})=>(
+        <div class="p-2 border-b border-b-gray-200">
+          <p><q>{title}</q>, {author}</p>
+        </div>
+      ))
+    }
+  </article>
