@@ -1,0 +1,16 @@
+---
+import CardBook from "@/components/CardBook.astro";
+import Section from "@/components/ui/Section.astro";
+import { BOOKS_INFO } from "@/lib/const/book";
+---
+
+<Section id="recomendaciones">
+    <h2 class="text-balance text-h2 my-h2 font-Season-mix">Recomendaciones</h2>
+    <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      {BOOKS_INFO.map((book)=>(
+        <li>
+          <CardBook {...book} />
+        </li>
+      ))}
+    </ul>
+</Section>
