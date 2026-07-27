@@ -1,5 +1,55 @@
 ---
 import Base from '../layouts/Base.astro'
+const faqs = [
+	{
+		question: '¿Qué es liderazgo imperfecto?',
+		answer:
+			'Es aceptar que un líder no tiene que aparentar tenerlo todo bajo control para ganarse a su equipo. Admitir un error frente a las personas que diriges no te resta autoridad: acorta la distancia y construye confianza. Jose Echeverri lo resume en su libro como asumir la vulnerabilidad y seguir siendo un eterno aprendiz, en lugar de esconder las grietas.'
+	},
+	{
+		question: '¿Cómo puedo aplicarlo en mi empresa?',
+		answer:
+			'Empieza por ti: la próxima vez que te equivoques frente a tu equipo, dilo en voz alta en lugar de taparlo. Pregunta más de lo que respondes en las reuniones y deja que la gente vea cómo piensas, no solo qué decides. Cuando el que manda muestra que también aprende, el resto se anima a proponer y a señalar problemas antes de que crezcan.'
+	},
+	{
+		question: '¿Qué puedo hacer para ser un mejor líder?',
+		answer:
+			'Escucha con la intención de entender, no de contestar. Reconoce en público lo que sale mal y asume tu parte antes de repartir culpas. Y protege tu atención: un líder desbordado y siempre conectado toma peores decisiones que uno que se da espacio para pensar.'
+	},
+	{
+		question: '¿En qué consiste la mentoría 1:1 con Jose Echeverri?',
+		answer:
+			'Es un proceso uno a uno donde Jose arma contigo un plan de desarrollo con acciones concretas, ajustado a tu momento como líder y al contexto de tu organización, dentro de un espacio seguro. Empieza por construir confianza y entender tus desafíos reales; de ahí salen acciones estratégicas y tácticas para tus decisiones del día a día. Después miden qué funcionó y qué ajustar, con esa mentalidad de eterno aprendiz. Arranca con una sesión inicial que agendas desde la página de contacto.'
+	}
+]
 ---
 
-<Base> Hola mundo </Base>
+<Base
+	title="Liderazgo Imperfecto: guía de Jose Echeverri"
+	description="Los mejores líderes no aparentan tenerlo todo bajo control. Así se ve el liderazgo imperfecto: admitir errores para ganar confianza e influencia.">
+	<h1>
+		El liderazgo que más cuesta no es el imperfecto, sino el que parece perfecto
+		mientras desgasta en silencio.
+	</h1>
+	<h2>preguntas frecuentes</h2>
+	{
+		faqs.map((faq) => (
+			<div>
+				<h3>{faq.question}</h3>
+				<p>{faq.answer}</p>
+			</div>
+		))
+	}
+	<script
+		type="application/ld+json"
+		set:html={JSON.stringify({
+			'@context': 'https://schema.org',
+			'@type': 'FAQPage',
+			mainEntity: faqs.map((faq) => ({
+				'@type': 'Question',
+				name: faq.question,
+				acceptedAnswer: { '@type': 'Answer', text: faq.answer }
+			}))
+		})}
+	/>
+</Base>
