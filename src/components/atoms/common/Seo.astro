@@ -1,0 +1,54 @@
+---
+interface Props {
+	title: string
+	description: string
+	image?: string
+}
+const { title, description, image = '/og-image.jpg' } = Astro.props
+const canonicalURL = new URL(Astro.url.pathname, Astro.site)
+const ogImage = new URL(image, Astro.site)
+---
+
+<title>{title}</title>
+<meta name="description" content={description} />
+<!-- Open Graph -->
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:type" content="website" />
+<meta property="og:url" content={canonicalURL.href} />
+<meta property="og:image" content={ogImage.href} />
+<meta property="og:locale" content="es_LA" />
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogImage.href} />
+
+<script
+	type="application/ld+json"
+	set:html={JSON.stringify({
+		'@context': 'https://schema.org',
+		'@type': 'Person',
+		name: 'Jose Echeverri',
+		url: 'https://liderazgoimperfecto.com',
+		sameAs: [
+			'https://www.youtube.com/@JoseMEcheverri',
+			'https://www.instagram.com/joseecheverri/',
+			'https://www.linkedin.com/in/jose-echeverri/'
+		]
+	})}
+/>
+
+<script
+	type="application/ld+json"
+	set:html={JSON.stringify({
+		'@context': 'https://schema.org',
+		'@type': 'Book',
+		name: 'Liderazgo Imperfecto',
+		url: 'https://www.librerianacional.com/liderazgo-imperfecto/p',
+		author: {
+			'@type': 'Person',
+			name: 'Jose Echeverri'
+		}
+	})}
+/>
