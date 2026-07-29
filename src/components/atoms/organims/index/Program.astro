@@ -9,19 +9,29 @@ import { PROGRAM } from '../../../../lib/const/program'
 		No es un curso. No es una conferencia. No es un retiro de dos días que se
 		olvida.
 	</h2>
-	<p class="text-pretty max-w-3xl mb-4">
-		El problema no es que los líderes no sepan, es la distancia entre lo que
-		saben y lo que hacen.
-	</p>
-	<p class="text-pretty max-w-3xl">
-		5 ciclos, uno por pilar: experiencias grupales, acompañamiento individual,
-		contenidos asíncronos, práctica continua.
-	</p>
+	<div class="grid md:grid-cols-2 gap-6 items-end">
+		<div>
+			<p class="text-pretty max-w-3xl mb-4">
+				El problema no es que los líderes no sepan, es la distancia entre lo que
+				saben y lo que hacen.
+			</p>
+			<p class="text-pretty max-w-3xl">
+				5 ciclos, uno por pilar: experiencias grupales, acompañamiento
+				individual, contenidos asíncronos, práctica continua.
+			</p>
+		</div>
+		<div>
+			<p class="font-mix">
+				+de 170.000 personas interactúan semanalmente con nosotros para
+				fortalecer su liderazgo.
+			</p>
+		</div>
+	</div>
 	<div class="mt-7">
 		<h3 class="text-heading-3 text-balance font-mix mb-6.5">
 			Que incluye el programa
 		</h3>
-		<ul class="grid md:grid-cols-3 gap-5.5">
+		<ul class="grid md:grid-cols-2 gap-5.5">
 			{
 				PROGRAM.map((label) => (
 					<li class="bg-black/20 rounded-3xl px-7 py-5 flex items-start gap-x-3.5 w-full h-full">
