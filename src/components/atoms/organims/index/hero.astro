@@ -1,0 +1,53 @@
+---
+import HeroLIEA from '@assets/img-all/Hero-LIEA.png'
+import Section from '@components/atoms/common/Section.astro'
+import { Image } from 'astro:assets'
+---
+
+<Section class="md:h-dvh md:pt-45 md:pb-13.5">
+	<div class="grid md:grid-cols-2 gap-5 h-full items-center">
+		<div>
+			<header aria-labelledby="hero-heading">
+				<h1 id="hero-heading" class="text-heading-1 text-balance mb-6.5">
+					El liderazgo que más cuesta no es el que falla, sino el que parece
+					perfecto mientras <span class="font-mix text-secondary"
+						>desgasta en silencio.</span
+					>
+				</h1>
+				<p class="mb-4 text-pretty">
+					Liderazgo Imperfecto en Acción propone un cambio de paradigma: de la
+					apariencia de perfección a un liderazgo auténtico, consciente y
+					profundamente humano.
+				</p>
+			</header>
+			<blockquote class="italic pl-4 border-l border-l-secondary mb-6.5">
+				<p>"No busques ser un líder perfecto. Busca ser un líder real."</p>
+			</blockquote>
+			<div class="flex flex-col md:flex-row gap-7">
+				<a
+					href="#"
+					class="bg-secondary/45 hover:bg-secondary transition-colors duration-300 px-6 py-3 rounded-full text-base text-primary font-semibold"
+					>Solicitar información</a
+				>
+				<a
+					href="#"
+					class="border border-cream text-cream hover:text-primary hover:bg-secondary transition-colors duration-300 px-6 py-3 rounded-full text-base font-semibold"
+					>Conocer el programa</a
+				>
+			</div>
+		</div>
+		<div class="relative">
+			<div
+				class="absolute inset-0 z-20 bg-linear-to-r from-primary to-transparent">
+			</div>
+			<Image
+				src={HeroLIEA}
+				width={1672}
+				height={941}
+				alt="Hero de Liderazgo Imperfecto"
+				format="webp"
+				class="w-full aspect-video rounded-3xl"
+			/>
+		</div>
+	</div>
+</Section>
