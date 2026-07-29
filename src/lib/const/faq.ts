@@ -22,7 +22,7 @@ export const faq = [
 	{
 		question: '¿Quién opera el programa?',
 		answer:
-			'TRI Latam y ANDARE implementan el programa en las empresas y Jose Echeverri participa de manera presencial, virtual y asíncrona, de acuerdo al programa definido en cada organización. Este equipo tiene capacidad de cobertura en todo Colombia y de forma virtual en Latam.'
+			'TRI Latam y ANDARE implementan el programa en las empresas. Este equipo tiene capacidad de cobertura en todo Colombia y de forma virtual en Latam.'
 	},
 	{
 		question: '¿Se entrega certificación?',
