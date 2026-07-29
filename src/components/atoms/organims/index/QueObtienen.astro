@@ -3,7 +3,7 @@ import Section from '@components/atoms/common/Section.astro'
 import { ORGANIZATION, PARTICIPANT } from '../../../../lib/const/que-obtienen'
 ---
 
-<Section class="py-4 md:py-13.5">
+<Section id="que-obtienen" class="py-4 md:py-13.5">
 	<header>
 		<h2 class="text-heading-2 text-balance mb-6.5 font-mix">Que obtienen</h2>
 		<p class="text-pretty mb-5.5">
@@ -19,15 +19,9 @@ import { ORGANIZATION, PARTICIPANT } from '../../../../lib/const/que-obtienen'
 					class="space-y-5 bg-black/20 border border-black/28 px-7 py-5 rounded-2xl">
 					{
 						PARTICIPANT.map((item) => (
-							<li>
-								<article>
-									<header>
-										<h4 class="text-heading-5 text-balance mb-3.5 font-mix">
-											{item.title}
-										</h4>
-									</header>
-									<p class="text-pretty">{item.description}</p>
-								</article>
+							<li class="flex items-start mt-0.2 gap-x-2.5">
+								<span>—</span>
+								{item.info}
 							</li>
 						))
 					}
@@ -39,15 +33,9 @@ import { ORGANIZATION, PARTICIPANT } from '../../../../lib/const/que-obtienen'
 					class="space-y-5 bg-black/20 border border-black/28 px-7 py-5 rounded-2xl">
 					{
 						ORGANIZATION.map((item) => (
-							<li>
-								<article>
-									<header>
-										<h4 class="text-heading-5 text-balance mb-3.5 font-mix">
-											{item.title}
-										</h4>
-									</header>
-									<p class="text-pretty">{item.description}</p>
-								</article>
+							<li class="flex items-start mt-0.2 gap-x-2.5">
+								<span>—</span>
+								{item.info}
 							</li>
 						))
 					}

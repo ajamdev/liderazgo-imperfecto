@@ -1,0 +1,101 @@
+---
+import Liea from '@assets/icons/logos/liea.svg'
+
+const SITEMAP = [
+	{ label: 'Inicio', href: '/#inicio' },
+	{ label: 'El video', href: '/#video' },
+	{ label: 'El programa', href: '/#programa' },
+	{ label: 'Los pilares', href: '/#pilares' },
+	{ label: 'Para empresas', href: '/#empresas' },
+	{ label: 'Qué obtienen', href: '/#que-obtienen' },
+	{ label: 'Aliados', href: '/#aliados' },
+	{ label: 'Primera cohorte', href: '/#cohorte' },
+	{ label: 'Solicitar información', href: '/#solicitar-informacion' },
+	{ label: 'Preguntas frecuentes', href: '/#faq' }
+]
+
+const SOCIALS = [
+	{ label: 'YouTube', href: 'https://www.youtube.com/@JoseMEcheverri' },
+	{ label: 'Instagram', href: 'https://www.instagram.com/joseecheverri/' },
+	{ label: 'LinkedIn', href: 'https://www.linkedin.com/in/jose-echeverri/' }
+]
+
+const year = new Date().getFullYear()
+---
+
+<footer class="bg-black/20 mt-13.5">
+	<div class="container mx-auto py-13.5">
+		<div class="grid gap-10 md:grid-cols-[1.2fr_1fr_1fr]">
+			<div>
+				<a href="/#inicio" aria-label="Ir al inicio">
+					<Liea class="w-20 h-auto text-cream" />
+				</a>
+				<p class="text-pretty text-sm text-cream/70 mt-4.5 max-w-xs">
+					Liderazgo Imperfecto en Acción: un programa de Jose Echeverri para
+					líderes y compañías que eligen la autenticidad sobre la apariencia de
+					perfección.
+				</p>
+				<ul class="flex items-center gap-4 mt-6">
+					{
+						SOCIALS.map((social) => (
+							<li>
+								<a
+									href={social.href}
+									target="_blank"
+									rel="noopener noreferrer"
+									class="text-cream/70 hover:text-secondary transition-colors duration-300">
+									{social.label}
+								</a>
+							</li>
+						))
+					}
+				</ul>
+			</div>
+
+			<nav aria-label="Mapa del sitio">
+				<h2 class="text-heading-5 font-mix mb-4.5">Mapa del sitio</h2>
+				<ul class="space-y-2.5 text-sm">
+					{
+						SITEMAP.map((item) => (
+							<li>
+								<a
+									href={item.href}
+									class="text-cream/70 hover:text-secondary transition-colors duration-300">
+									{item.label}
+								</a>
+							</li>
+						))
+					}
+				</ul>
+			</nav>
+
+			<div>
+				<h2 class="text-heading-5 font-mix mb-4.5">Contacto</h2>
+				<ul class="space-y-2.5 text-sm text-cream/70">
+					<li>
+						<a
+							href="mailto:liea@joseecheverri.com"
+							class="hover:text-secondary transition-colors duration-300"
+							>liea@joseecheverri.com</a
+						>
+					</li>
+					<li>
+						<a
+							href="https://wa.me/573332785508?text=quiero%20m%C3%A1s%20informaci%C3%B3n"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="hover:text-secondary transition-colors duration-300"
+							>WhatsApp +57 333 278 5508</a
+						>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div
+			class="mt-10 pt-6 border-t border-cream/15 flex flex-col-reverse gap-4 text-xs text-cream/50 md:flex-row md:items-center md:justify-between">
+			<p>&copy; {year} Liderazgo Imperfecto. Todos los derechos reservados.</p>
+			<p>Jose Echeverri &mdash; Liderazgo Imperfecto en Acción</p>
+		</div>
+	</div>
+</footer>
