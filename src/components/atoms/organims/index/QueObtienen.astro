@@ -11,51 +11,48 @@ import { ORGANIZATION, PARTICIPANT } from '../../../../lib/const/que-obtienen'
 		</p>
 	</header>
 
-	<div
-		id="panel-participantes"
-		role="tabpanel"
-		aria-labelledby="tab-participantes">
-		<!-- lista de participantes -->
-		<h3 class="my-5.5 text-heading-5">Participantes</h3>
-
-		<ul class="grid md:grid-cols-3 gap-5.5">
-			{
-				PARTICIPANT.map((item) => (
-					<li>
-						<article class="px-7 py-5 rounded-3xl bg-black/20 w-full h-full">
-							<header>
-								<h3 class="text-heading-5 text-balance mb-3.5 font-mix">
-									{item.title}
-								</h3>
-							</header>
-							<p class="text-pretty">{item.description}</p>
-						</article>
-					</li>
-				))
-			}
-		</ul>
-	</div>
-	<div
-		id="panel-organizaciones"
-		role="tabpanel"
-		aria-labelledby="tab-organizaciones">
-		<!-- lista de organizaciones -->
-		<h3 class="my-5.5 text-heading-5">Organizaciones</h3>
-		<ul class="grid md:grid-cols-3 gap-5.5">
-			{
-				ORGANIZATION.map((item) => (
-					<li>
-						<article class="px-7 py-5 rounded-3xl bg-black/20 w-full h-full">
-							<header>
-								<h3 class="text-heading-5 text-balance mb-3.5 font-mix">
-									{item.title}
-								</h3>
-							</header>
-							<p class="text-pretty">{item.description}</p>
-						</article>
-					</li>
-				))
-			}
-		</ul>
+	<div>
+		<div class="grid md:grid-cols-2 gap-7">
+			<div>
+				<h3 class="my-5.5 text-heading-5">Participantes</h3>
+				<ul
+					class="space-y-5 bg-black/20 border border-black/28 px-7 py-5 rounded-2xl">
+					{
+						PARTICIPANT.map((item) => (
+							<li>
+								<article>
+									<header>
+										<h4 class="text-heading-5 text-balance mb-3.5 font-mix">
+											{item.title}
+										</h4>
+									</header>
+									<p class="text-pretty">{item.description}</p>
+								</article>
+							</li>
+						))
+					}
+				</ul>
+			</div>
+			<div>
+				<h3 class="my-5.5 text-heading-5">Organizaciones</h3>
+				<ul
+					class="space-y-5 bg-black/20 border border-black/28 px-7 py-5 rounded-2xl">
+					{
+						ORGANIZATION.map((item) => (
+							<li>
+								<article>
+									<header>
+										<h4 class="text-heading-5 text-balance mb-3.5 font-mix">
+											{item.title}
+										</h4>
+									</header>
+									<p class="text-pretty">{item.description}</p>
+								</article>
+							</li>
+						))
+					}
+				</ul>
+			</div>
+		</div>
 	</div>
 </Section>
