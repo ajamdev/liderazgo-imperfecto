@@ -1,4 +1,6 @@
 import alejandro from '@assets/img-all/tri/alejandro.jpg'
+import cristina from '@assets/img-all/tri/cristina.jpeg'
+import mariacris from '@assets/img-all/tri/maria-cristina-piedrahita.jpg'
 import maria from '@assets/img-all/tri/maria.jpg'
 
 import jimena from '@assets/img-all/andare/jimena.jpg'
@@ -29,6 +31,30 @@ export const TRI = [
 		],
 		url: 'maría-cristina-caicedo-rivera-a5aa5989',
 		photo: maria
+	},
+	{
+		name: 'María Cristina Piedrahita ',
+		jobTitle: 'Consultora en Desarrollo Organizacional',
+		city: 'Medellin',
+		description: [
+			'Soy María Cristina. Creo que las empresas logran sus objetivos con la gente, no a pesar de ella, y que cuando lo hacen bien se vuelven más resilientes y dejan una huella que trasciende en cada colaborador.',
+			'Soy psicóloga y consultora, con más de 22 años acompañando organizaciones en Latinoamérica —20 de ellos en multilatinas y multinacionales— desde múltiples frentes del talento humano.',
+			'Mi convicción: los líderes que se desarrollan desde la consciencia de sí mismos y la autenticidad, y no desde la perfección, transforman no solo su equipo sino el entorno completo. Hoy acompaño a quienes están dispuestos a mirarse al espejo y comprometerse con el desarrollo de su gente con la misma intensidad con la que cuidan sus resultados.'
+		],
+		url: 'cristinapiedrahita/?skipRedirect=true',
+		photo: mariacris
+	},
+	{
+		name: 'Cristina Castañeda',
+		jobTitle: 'Consultora asociada',
+		city: 'Bogota',
+		description: [
+			'Soy Cristina Castañeda, Administradora de Empresas y PMO de proyectos de gestión de talento humano, PMP y SCRUM certificada y creo que una gestión operativa exitosa requiere tanto rigor metodológico como un profundo entendimiento humano.',
+			'A lo largo de 18 años de trayectoria he administrado proyectos orquestando procesos, herramientas y talento de forma estructurada.',
+			'Mi convicción: ejercer el rol de PMO como el motor que organiza la operación, garantizando resultados y cumplimiento de metas desde un enfoque cercano y auténtico con los equipos.'
+		],
+		url: 'cristina-casta%C3%B1eda-29503b27',
+		photo: cristina
 	}
 ]
 
