@@ -29,6 +29,8 @@
 	--text-heading-5--line-height: 1.05;
 	--text-heading-5--letter-spacing: -0.02rem;
 	--text-heading-5--font-weight: 700;
+
+	--grid-template-columns-media-content: 24rem 1fr;
 }
 
 body {
