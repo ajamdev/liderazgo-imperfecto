@@ -1,0 +1,21 @@
+---
+import Check from '@assets/check.svg'
+import Section from '@components/atoms/common/Section.astro'
+import { COMPANY } from '../../../../lib/const/empresas'
+---
+
+<Section class="py-4 md:py-13.5">
+	<h2 class="text-heading-2 text-balance font-mix mb-6.5">
+		Estamos buscando 8 compañías que:
+	</h2>
+	<ul class="max-w-250 mx-auto grid md:grid-cols-2 rounded-3xl overflow-hidden">
+		{
+			COMPANY.map((item) => (
+				<li class="px-8 py-6 h-full w-full bg-black/10 hover:bg-black/20 transition-colors duration-300 flex items-start gap-x-3">
+					<Check class="size-5 mt-1 shrink-0 border border-secondary p-1 rounded-full text-secondary" />
+					{item.answer}
+				</li>
+			))
+		}
+	</ul>
+</Section>
