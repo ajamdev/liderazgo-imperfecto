@@ -1,0 +1,58 @@
+---
+import Andare from '@assets/icons/logos/andare.svg'
+import Section from '@components/atoms/common/Section.astro'
+import { Image } from 'astro:assets'
+import Base from '../layouts/Base.astro'
+import { ANDARE } from '../lib/const/tri'
+---
+
+<Base title="" description="">
+	<main>
+		<header>
+			<div class="container mx-auto">
+				<div class="flex justify-between items-center">
+					<h1 class="text-heading-3">Andare</h1>
+					<Andare />
+				</div>
+			</div>
+		</header>
+		<Section class="py-4 md:py-13.5">
+			<ul class="flex flex-col gap-6">
+				{
+					ANDARE.map((item) => (
+						<li>
+							<a
+								href={`https://www.linkedin.com/in/${item.url}`}
+								target="_blank"
+								rel="noopener noreferrer">
+								<article class="grid md:grid-cols-media-content overflow-hidden bg-black/20 rounded-3xl">
+									<Image
+										src={item.photo}
+										alt={item.name}
+										width={384}
+										height={384}
+										class="w-full h-full object-cover"
+									/>
+									<div class="px-7 py-5">
+										<header>
+											<h2 class="text-heading-1 text-balance mb-5.5">
+												{item.name}
+											</h2>
+											<p class="text-sm text-pretty font-mix mb-7">
+												{item.jobTitle} - {item.city}
+											</p>
+										</header>
+										{item.description.map((paragraph) => (
+											<p class="text-pretty mb-4">{paragraph}</p>
+										))}
+										<span>Ir al LinkedIn de {item.name.split(' ')[0]}</span>
+									</div>
+								</article>
+							</a>
+						</li>
+					))
+				}
+			</ul>
+		</Section>
+	</main>
+</Base>
