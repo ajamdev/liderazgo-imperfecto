@@ -44,14 +44,16 @@ import { Image } from 'astro:assets'
 			<div
 				class="absolute inset-0 z-20 bg-linear-to-r from-primary to-transparent">
 			</div>
-			<Image
-				src={HeroLIEA}
-				width={1672}
-				height={941}
-				alt="Hero de Liderazgo Imperfecto"
-				format="webp"
-				class="w-full aspect-video rounded-3xl"
-			/>
+			<div class="w-full overflow-hidden aspect-video rounded-3xl">
+				<Image
+					src={HeroLIEA}
+					width={1672}
+					height={941}
+					alt="Hero de Liderazgo Imperfecto"
+					format="webp"
+					class="w-full"
+				/>
+			</div>
 		</div>
 	</div>
 </Section>
