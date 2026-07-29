@@ -1,7 +1,7 @@
 export const COMPANY = [
 	{
 		answer:
-			'Estén buscando un Programa puntual y efectivo para impulsar el desarrollo de sus líderes'
+			'Quieren desarrollar un Programa puntual y efectivo para impulsar el desarrollo de sus líderes'
 	},
 	{
 		answer:
