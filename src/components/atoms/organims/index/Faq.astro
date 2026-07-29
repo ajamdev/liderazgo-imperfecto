@@ -1,0 +1,48 @@
+---
+import Section from '@components/atoms/common/Section.astro'
+import { faq } from '../../../../lib/const/faq'
+---
+
+<Section class="py-4 md:py-13.5">
+	<h2 class="text-heading-2 text-balance font-mix mb-6.5 text-center">
+		Preguntas frecuentes
+	</h2>
+	<div class="max-w-3xl mx-auto space-y-4.5 [counter-reset:faq]">
+		{
+			faq.map((item) => (
+				<details
+					name="faq"
+					class="group [counter-increment:faq] bg-secondary text-primary rounded-3xl px-7 py-4 open:pb-5.5">
+					<summary class="flex items-start justify-between gap-4 cursor-pointer list-none font-semibold text-pretty focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
+						<span class="flex gap-2.5">
+							<span
+								aria-hidden="true"
+								class="font-mix shrink-0 before:content-[counter(faq,decimal-leading-zero)_'.']"
+							/>
+							<span>{item.question}</span>
+						</span>
+						<span aria-hidden="true" class="relative size-5 mt-1 shrink-0">
+							<span class="absolute inset-0 m-auto h-0.5 w-3.5 rounded-full bg-primary" />
+							<span class="absolute inset-0 m-auto h-3.5 w-0.5 rounded-full bg-primary transition-transform duration-300 group-open:rotate-90" />
+						</span>
+					</summary>
+					<div class="bg-cream rounded-2xl p-4 mt-4">
+						<p class="text-pretty">{item.answer}</p>
+					</div>
+				</details>
+			))
+		}
+	</div>
+	<footer>
+		<div class="max-w-lg mx-auto text-center mt-7">
+			<p>
+				¿Tienes otra pregunta? Escríbenos a <a
+					href="mailto:liea@joseecheverri.com"
+					class="text-accent">liea@joseecheverri.com</a
+				> o por WhatsApp <span class="text-accent font-semibold font-mix"
+					>+57 333 278 5508</span
+				> — te respondemos en menos de 24 horas.
+			</p>
+		</div>
+	</footer>
+</Section>
