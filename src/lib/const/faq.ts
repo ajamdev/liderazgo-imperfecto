@@ -17,7 +17,7 @@ export const faq = [
 	{
 		question: '¿Cómo se mide el impacto y los resultados?',
 		answer:
-			'Con el assessment &quot;Espejo del Líder&quot;, aplicado al inicio y al cierre del programa. Al finalizar, la empresa recibe un informe con insights y recomendaciones para sostener el proceso; cada líder cuenta con una bitácora de desarrollo y un caso final documentado.'
+			'Con el assessment "Espejo del líder", aplicado al inicio y al cierre del programa. Al finalizar, la empresa recibe un informe con insights y recomendaciones para sostener el proceso, cada líder cuenta con una bitácora de desarrollo y un caso final documentado.'
 	},
 	{
 		question: '¿Quién opera el programa?',
