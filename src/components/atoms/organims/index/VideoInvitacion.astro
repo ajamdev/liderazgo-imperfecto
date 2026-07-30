@@ -5,9 +5,23 @@ import Section from '@components/atoms/common/Section.astro'
 <Section id="video" class="py-4 md:py-13.5">
 	<div class="grid md:grid-cols-2 gap-5 items-center">
 		<div>
-			<video controls class="aspect-video w-full">
+			<video
+				controls
+				playsinline
+				preload="metadata"
+				class="aspect-video w-full">
+				<source src="/JoseEcheverri.mov" type="video/mov" />
 				<source src="/JoseEcheverri.webm" type="video/webm" />
-				<source src="/JoseEcheverri.mp4" type="video/mp4" />
+				<source
+					src="/JoseEcheverri.mov"
+					type="video/mov"
+					media="(max-width: 767px)"
+				/>
+				<source
+					src="/JoseEcheverri.webm"
+					type="video/webm"
+					media="(max-width: 767px)"
+				/>
 			</video>
 		</div>
 		<div>
