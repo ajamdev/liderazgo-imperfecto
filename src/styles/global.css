@@ -33,6 +33,10 @@
 	--grid-template-columns-media-content: 24rem 1fr;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	font-family: var(--font-sans);
 	background-color: var(--color-primary);
