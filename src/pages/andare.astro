@@ -17,7 +17,8 @@ import { ANDARE } from '../lib/const/tri'
 			</div>
 		</header>
 		<Section class="py-4 md:py-13.5">
-			<ul class="flex flex-col gap-6">
+			<a href="/#aliados">Regresar</a>
+			<ul class="grid md:grid-cols-2 gap-6 mt-7">
 				{
 					ANDARE.map((item) => (
 						<li>
@@ -25,24 +26,26 @@ import { ANDARE } from '../lib/const/tri'
 								href={`https://www.linkedin.com/in/${item.url}`}
 								target="_blank"
 								rel="noopener noreferrer">
-								<article class="grid md:grid-cols-media-content overflow-hidden bg-black/20 rounded-3xl">
-									<Image
-										src={item.photo}
-										alt={item.name}
-										width={384}
-										height={384}
-										class="w-full h-full object-cover"
-										format="webp"
-									/>
-									<div class="px-7 py-5">
-										<header>
+								<article class="overflow-hidden bg-black/20 rounded-3xl w-full h-full">
+									<div class="grid md:grid-cols-media-content gap-4 items-center">
+										<Image
+											src={item.photo}
+											alt={item.name}
+											width={384}
+											height={384}
+											class="w-full h-full object-cover"
+											format="webp"
+										/>
+										<div class="px-7 md:px-0 py-5">
 											<h2 class="text-heading-1 text-balance mb-5.5">
 												{item.name}
 											</h2>
 											<p class="text-sm text-pretty font-mix mb-7">
 												{item.jobTitle} - {item.city}
 											</p>
-										</header>
+										</div>
+									</div>
+									<div class="px-7 py-5">
 										{item.description.map((paragraph) => (
 											<p class="text-pretty mb-4">{paragraph}</p>
 										))}
